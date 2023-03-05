@@ -1,12 +1,17 @@
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
     return (
         <div className='landingPage'>
+            <div className='linkContainer'>
+            {/* <Link>  
+            <button>Eyes </button>
+            </Link> */}
 
-            <p>
-                hey hey
-            </p>
+            <Link to = '/lips'>
+            <button>Lips</button>
+            </Link>
+            </div>
 
         </div>
     )
