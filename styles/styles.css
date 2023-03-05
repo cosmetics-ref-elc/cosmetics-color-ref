@@ -1,3 +1,61 @@
+.pureColor {
+  margin: 0 auto;
+}
+
+.pureColorImgContainer {
+  width: 500px;
+  margin: 0 auto;
+}
+.pureColorImgContainer img {
+  max-width: 100%;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.colorCombinations {
+  margin: 0 auto;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.colorCombinations .colorCombination {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+.colorCombinations .colorCombination img {
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+.info {
+  margin: 0 20%;
+}
+
+.refernceInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20%;
+  margin-bottom: 30px;
+}
+.refernceInfo h4, .refernceInfo p {
+  margin: 0;
+}
+
 h1 {
   color: black;
 }
