@@ -4,9 +4,9 @@ const LandingPage = () => {
     return (
         <div className='landingPage'>
             <div className='linkContainer'>
-            {/* <Link>  
+            <Link>  
             <button>Eyes </button>
-            </Link> */}
+            </Link>
 
             <Link to = '/lips'>
             <button>Lips</button>
