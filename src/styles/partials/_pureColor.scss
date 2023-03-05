@@ -1,0 +1,58 @@
+
+.pureColor{
+    margin:0 auto;
+
+}
+
+.pureColorImgContainer{
+    width:500px;
+    margin:0 auto;
+
+img{
+    max-width: 100%;
+}
+}
+
+h2, h3{
+    text-align: center;
+   
+}
+
+.colorCombinations{
+    margin:0 auto;
+   width:500px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+   
+
+    .colorCombination{
+        flex:.3;
+
+        img{
+           max-width: 100%;
+           margin-right: 20px;
+        }
+
+    }
+}
+
+.info{
+    margin:0 20%;
+    
+}
+
+.refernceInfo{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20%;
+  
+    margin-bottom: 30px;
+    h4,p {
+        margin: 0;
+    }
+
+    
+
+   
+}
