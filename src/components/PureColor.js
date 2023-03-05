@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 const PureColor = () => {
 
-    const [selectedColor, serSelectedColor] = useState(null);
+    // const [selectedColor, serSelectedColor] = useState(null);
 
-    const handleColorClick = (color) => {
-        serSelectedColor(color)
-    }
+    // const handleColorClick = (color) => {
+    //     serSelectedColor(color)
+    // }
 
 
 
@@ -32,17 +32,31 @@ const PureColor = () => {
                     <img src={no002} alt="004 CARING CRYSTAL" />
                 </div>
 
-                {/* will be adding more */}
+                {/* will be adding more colors*/}
 
 
             </div>
 
-            <h3 className='002'>002 COSMIC CRYSTAL</h3>
+           <form>
+            <label htmlFor="002cosmicCrystal"></label>
+                    <select
+                        name="colors"
+                        id="colors"
+                        className='colors'
+                    >
+                        <option value="002cosmicCrystal">002 cosmic crystal</option>
+                        <option value="004caringCrystal">004 caring crystal</option>
+                        </select>
+
+            
+           </form>
+
+           
             <h3 className='004'>004 CARING CRYSTAL</h3>
-            {/* will be adding more */}
+            {/* will be adding more colors*/}
 
 
-            <div className='info'> {/* will be adding drop down functions */}
+            <div className='info'> {/* need to add a drop down to show more contents (same as offcial website) */}
                 <div>
                     <h4>How to use</h4>
                 </div>
