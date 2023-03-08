@@ -1,8 +1,6 @@
 @use "./partials/baseStyle";
-@use "./partials/pureColor";
+@use "./partials/headerAndNav";
 
-
-h1{
-    color:black;
+h1 {
+  color: black;
 }
-
