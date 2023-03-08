@@ -1,4 +1,4 @@
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const LipsLandingPage = () => {
@@ -7,7 +7,7 @@ const LipsLandingPage = () => {
     return (
 
         <div>
-
+            <h2>LIPS</h2>
             <Link to='/lips/pure-color'>
                 <button >Pure Color</button>
             </Link>
