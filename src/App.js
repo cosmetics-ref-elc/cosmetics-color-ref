@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link, Routes, Route } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import LipsLandingPage from './components/LlipsLandingPage';
+import PureColor from './components/PureColor';
+import PureColorEnvy from './components/PureColorEnvy';
+import './styles/styles.scss';
 
-function App() {
+
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Link to='/'>
+          <h1>
+            Chrōma
+          </h1>
+        </Link>
       </header>
-    </div>
+
+     
+    
+
+
+   
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+
+        <Route path='/lips' element={<LipsLandingPage />} />
+        
+        <Route path='/lips/pure-color' element={<PureColor />} />
+
+        <Route path='/lips/pure-color-envy' element={<PureColorEnvy />} />
+
+      </Routes>
+
+
+
+    </div >
   );
 }
 
