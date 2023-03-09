@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainNav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+  }
+}
