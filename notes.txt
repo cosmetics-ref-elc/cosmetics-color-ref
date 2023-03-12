@@ -1,0 +1,15 @@
+Backend Notes For ReadMe
+
+Sections 
+Planning 
+ERD
+ERD explained below
+
+Database Setup
+- Have three models - Category, Product, Shade
+- Categories to Products has a one to many relationship
+    - This needs to be references because we want products to be queriable independently
+- Products to Shades also has a one to many relationship
+    - This needs to be embedded because we dont necessarily want to make a shade queriable independently
+
+
