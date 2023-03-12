@@ -7,7 +7,7 @@ module.exports = {
 
 async function index(req, res) {
     const categories = await Category.find({})
-    // console.log(categories)
+    console.log(categories)
     res.json(categories);
 }
 
