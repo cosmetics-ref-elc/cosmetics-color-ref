@@ -8,6 +8,7 @@ export default function CategoryCard({ categories }) {
             className={cat}
         >
             <h1>{cat}</h1>
+            <img src={`url/${cat}.jpg`} alt=""/>
             <button><Link to="/category-page">{cat}</Link></button>
         </div>
     );
