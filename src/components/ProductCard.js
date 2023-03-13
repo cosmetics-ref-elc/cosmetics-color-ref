@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 
 export default function ProductCard({ products }) {
 
-    const product_cards = products.map(product =>
+    console.log(products[0])
+
+    const product_cards = products[0].products.map(product =>
         <div
             key={product._id}
             className={product.name}

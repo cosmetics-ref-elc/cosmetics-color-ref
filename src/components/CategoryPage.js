@@ -32,8 +32,9 @@ const CategoryPage = () => {
             const products = await categoriesAPI.getById(category._id);
             setProducts(products)
         }
+        console.log(products)
         getProducts()
-    })
+    }, [])
 
     return (
         <section className="categoryPage">

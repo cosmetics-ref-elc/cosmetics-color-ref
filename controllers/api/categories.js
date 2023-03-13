@@ -1,5 +1,5 @@
 const Category = require('../../models/category');
-const Product = require('../../models/product')
+const Product = require('../../models/product');
 
 module.exports = {
     index,
@@ -12,19 +12,20 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-    console.log(req.params)
     const data = await Category.aggregate(
         [
             {
+                $match: { $expr: { $eq: ['$_id', { $toObjectId: req.params.id }] } }
+            },
+            {
                 $lookup: {
-                    from: Product,
-                    localField: req.params.id,
+                    from: 'products',
+                    localField: '_id',
                     foreignField: 'category',
                     as: 'products'
                 }
             }
         ]
     )
-    console.log(data)
-    // res.json(product);
+    res.json(data);
 }
