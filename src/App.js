@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         {/* Thinking that both the category and product pages each needs a CUSTOM route (i.e. custom param)  */}
-        <Route path="/category-page" element={<CategoryPage />} />
+        <Route path="/category/:name" element={<CategoryPage />} />
         <Route path="/category-page/product-page" element={<ProductPage />} />
       </Routes>
     </div>
