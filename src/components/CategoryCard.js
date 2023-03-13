@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function CategoryCard({ categories }) {
 
@@ -8,8 +8,8 @@ export default function CategoryCard({ categories }) {
             className={cat}
         >
             <h1>{cat}</h1>
-            <button><Link to="/category-page">{cat}</Link></button>
-        </div>
+            <button><Link to={"/category/" + cat.toLowerCase()} >{cat}</Link></button>
+        </div >
     );
 
     return (

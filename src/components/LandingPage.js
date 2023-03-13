@@ -31,7 +31,6 @@ const LandingPage = () => {
     async function getCategories() {
       const categories = await categoriesAPI.getAll();
       const category_names = categories.map(cat => cat.name)
-      // console.log(category_names)
       setCategories(category_names)
     }
     getCategories()

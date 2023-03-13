@@ -22,7 +22,7 @@ const CategoryPage = () => {
     return (
         <section className="categoryPage">
             {/* empty {}jsx curlies to indicate the data that needs to go in there according to the API call. In our case, it will either say LIPS or EYES */}
-            <h2>{ }</h2>
+            <h2>Category</h2>
             {/* I'm thinking of an empty ul in here so that whatever products we have listed in our database can be displayed here as an li */}
             {/* We'll need to create some kind of forEach or map function so that we can get it displayed accordingly!! */}
             <ul className="productSelections">

@@ -1,4 +1,5 @@
 const Category = require('../../models/category');
+const Product = require('../../models/product')
 
 module.exports = {
     index,
@@ -12,6 +13,8 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-    // const product = await Product.findById(req.params.id);
+    const products = await Category.find(req.params.id);
+
+
     // res.json(product);
 }
