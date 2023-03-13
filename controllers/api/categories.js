@@ -8,13 +8,23 @@ module.exports = {
 
 async function index(req, res) {
     const categories = await Category.find({})
-    // console.log(categories)
     res.json(categories);
 }
 
 async function show(req, res) {
-    const products = await Category.find(req.params.id);
-
-
+    console.log(req.params)
+    const data = await Category.aggregate(
+        [
+            {
+                $lookup: {
+                    from: Product,
+                    localField: req.params.id,
+                    foreignField: 'category',
+                    as: 'products'
+                }
+            }
+        ]
+    )
+    console.log(data)
     // res.json(product);
 }

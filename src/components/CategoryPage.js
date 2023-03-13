@@ -1,6 +1,8 @@
-// import { useState } from 'react';
-
-import ProductPage from "./ProductPage";
+import { useLocation } from "react-router";
+import { useState, useEffect } from 'react';
+import * as categoriesAPI from '../utilities/categories-api';
+import ProductCard from './ProductCard';
+// import ProductPage from "./ProductPage";
 
 // CategoryPage pseudocode (one page for both eyes and lips)
 // - In the productCard:
@@ -19,10 +21,23 @@ const CategoryPage = () => {
     //   setIsClicked(true);
     // };
 
+    const location = useLocation()
+    const category = location.state;
+    console.log(category)
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(function () {
+        async function getProducts() {
+            const products = await categoriesAPI.getById(category._id);
+            setProducts(products)
+        }
+        getProducts()
+    })
+
     return (
         <section className="categoryPage">
-            {/* empty {}jsx curlies to indicate the data that needs to go in there according to the API call. In our case, it will either say LIPS or EYES */}
-            <h2>Category</h2>
+            <h2>{category.name}</h2>
             {/* I'm thinking of an empty ul in here so that whatever products we have listed in our database can be displayed here as an li */}
             {/* We'll need to create some kind of forEach or map function so that we can get it displayed accordingly!! */}
             <ul className="productSelections">
@@ -39,6 +54,8 @@ const CategoryPage = () => {
                         SWATCH IMAGE: 
                         <img src={ } alt="" />
                 </li> */}
+
+                <ProductCard products={products} />
             </ul>
 
             {/* {isClicked && <ProductPage/>} */}

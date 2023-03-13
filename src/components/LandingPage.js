@@ -30,8 +30,7 @@ const LandingPage = () => {
   useEffect(function () {
     async function getCategories() {
       const categories = await categoriesAPI.getAll();
-      const category_names = categories.map(cat => cat.name)
-      setCategories(category_names)
+      setCategories(categories)
     }
     getCategories()
   }, [])
