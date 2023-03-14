@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import NavBar from './NavBar';
+
 import CategoryCard from './CategoryCard';
 import * as categoriesAPI from '../utilities/categories-api';
 
@@ -17,11 +17,10 @@ const LandingPage = () => {
 
   return (
     <section className="landingPage">
-      <NavBar />
       <header>
         <h2>Cosmetic Color Reference</h2>
         <p className="shortDesc">
-          Short description explaining what this app does and who it serves.
+          Short description explaining what this app does and who it serves. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolores ut, natus praesentium quibusdam?
           {/* is this going to have an expandable 'learn more' thing? */}
         </p>
       </header>

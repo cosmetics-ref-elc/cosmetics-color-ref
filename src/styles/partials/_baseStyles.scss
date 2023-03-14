@@ -17,3 +17,12 @@ a {
   text-decoration: none;
   color: $textColor;
 }
+
+#App {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}

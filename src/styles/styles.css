@@ -273,17 +273,33 @@ a {
   color: #222222;
 }
 
+#App {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
 .mainNav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   background-color: #fefefe;
   padding: 15px 65px;
+  position: relative;
 }
-.mainNav .nav-logo {
+.mainNav .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainNav .navLogo {
   color: #333333;
 }
-.mainNav .nav-logo h1 {
+.mainNav .navLogo h1 {
   margin: 0 auto;
   font-size: 40px;
   line-height: 1.21025;
@@ -318,6 +334,7 @@ a {
   font-size: 18px;
   line-height: 1.3333333333;
   margin-bottom: 80px;
+  max-width: 600px;
 }
 .landingPage .categories {
   display: flex;
@@ -328,4 +345,21 @@ a {
 .landingPage .categories h3 {
   font-size: 24px;
   line-height: 1.3333333333;
+}
+
+footer {
+  width: 100%;
+}
+footer .footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e1e1e1;
+  margin: 0 70px;
+}
+footer .footerContainer h3 {
+  font-size: 14px;
+}
+footer .footerContainer p {
+  font-size: 12px;
 }/*# sourceMappingURL=styles.css.map */

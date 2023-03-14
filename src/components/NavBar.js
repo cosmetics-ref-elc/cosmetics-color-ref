@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
       <nav className="mainNav">
-          {/* ask Ingrid how important it is to have the logo in the center - it's just a lot easier to have it in the left :P  */}
       <div className="logo">
-        <Link className="nav-logo" to="/">
+        <Link className="navLogo" to="/">
           <h1>chrōma</h1>
         </Link>
       </div>
