@@ -287,7 +287,8 @@ footer {
   justify-content: flex-end;
   align-items: center;
   background-color: #fefefe;
-  padding: 15px 65px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 65px;
   position: relative;
 }
 .mainNav .logo {
@@ -348,6 +349,28 @@ footer {
 .landingPage .categories h3 {
   font-size: 24px;
   line-height: 1.3333333333;
+}
+.landingPage .categoryCard {
+  display: flex;
+  gap: 15px;
+}
+.landingPage .categoryCard .catCards {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 2px solid #000000;
+  width: 310px;
+  height: 366px;
+  text-align: center;
+  background-color: #fff;
+}
+.landingPage .categoryCard .catCards h3 {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+.landingPage .categoryCard .catCards .catCardsImg {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 footer {
