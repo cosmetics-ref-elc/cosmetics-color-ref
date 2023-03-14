@@ -26,15 +26,14 @@ const LandingPage = () => {
   //NEW CODE 
   const [categories, setCategories] = useState([]);
 
-
   useEffect(function () {
     async function getCategories() {
       const categories = await categoriesAPI.getAll();
       setCategories(categories)
     }
     getCategories()
+    console.log('I only fire once!')
   }, [])
-
 
   return (
     <section className="landingPage">
@@ -46,23 +45,8 @@ const LandingPage = () => {
       </header>
 
       <div className="categories">
-        {/* should eventually be some kind of links (need to be custom??), but keeping it simple as divs for now - we need it to be like a custom link almost (see my note in App.js) */}
-
-        {/* PREVIOUS CODE */}
-        {/* <div className="categoryCard" onClick={handleCategoriesClick}>
-          Eyes
-        </div>
-        
-        <div className="categoryCard" onClick={handleCategoriesClick}>
-          Lips
-        </div> */}
-
-        {/* NEW CODE */}
         <CategoryCard categories={categories} />
-
       </div>
-
-      {/* {isClicked && <CategoryPage />} */}
 
     </section>
   );
