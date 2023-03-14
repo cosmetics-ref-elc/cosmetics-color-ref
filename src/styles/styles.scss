@@ -1,6 +1,5 @@
+@use "./partials/variables" as *;
+@use "./partials/setup";
 @use "./partials/baseStyle";
 @use "./partials/headerAndNav";
-
-h1 {
-  color: black;
-}
+@use "./partials/categoryCard";
