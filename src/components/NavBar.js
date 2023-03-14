@@ -2,14 +2,19 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="mainNav">
+      <nav className="mainNav">
+          {/* ask Ingrid how important it is to have the logo in the center - it's just a lot easier to have it in the left :P  */}
+      <div className="logo">
+        <Link className="nav-logo" to="/">
+          <h1>chrōma</h1>
+        </Link>
+      </div>
       <ul>
         <li>
           <Link to="/category-page">Product Category</Link>
         </li>
-        <li>
+        <li className="toggle">
           Greyscale
-          {/* add better greyscale toggle button */}
           {/* <button>toggle</button> */}
           <div id="darkmode-section">
             <label id="darkmode-label" for="darkmode">

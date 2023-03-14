@@ -1,24 +1,30 @@
 @use "./variables" as *;
 
-header {
+.mainNav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: $secondaryColor;
-  .logo {
-    text-decoration: none;
+  padding: 15px 65px;
+  .nav-logo {
+    color: $logoColor;
     h1 {
-      margin-top: 0;
+      margin: 0 auto;
       font-size: 40px;
       line-height: (48.41 / 40);
     }
   }
-}
-
-.mainNav {
   ul {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    list-style: none;
+    li {
+      font-size: 20px;
+      line-height: (28 / 20);
+    }
+    .toggle {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
 }

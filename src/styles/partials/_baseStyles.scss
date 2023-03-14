@@ -2,6 +2,7 @@
 
 html {
   background-color: $primaryColor;
+  color: $textColor;
 }
 
 img {
@@ -10,4 +11,9 @@ img {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor;
 }

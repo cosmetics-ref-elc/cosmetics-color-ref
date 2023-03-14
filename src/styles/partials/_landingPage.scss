@@ -1,0 +1,27 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.landingPage {
+  header {
+    @include flexDefault;
+    h2 {
+      font-size: 64px;
+      font-weight: 400;
+      line-height: (68 / 64);
+      margin: 70px auto 35px;
+    }
+    .shortDesc {
+      font-size: 18px;
+      line-height: (24 / 18);
+      margin-bottom: 80px;
+    }
+  }
+
+  .categories {
+    @include flexDefault;
+    h3 {
+      font-size: 24px;
+      line-height: (32 / 24);
+    }
+  }
+}
