@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import CategoryPage from './components/CategoryPage';
 import ProductPage from './components/ProductPage';
+import Footer from './components/Footer';
 import TheCreators from './components/TheCreators';
 
 import './styles/styles.scss';

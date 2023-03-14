@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-
+import Toggle from "./Toggle";
 const NavBar = () => {
   return (
-      <nav className="mainNav">
+    <nav className="mainNav">
       <div className="logo">
         <Link className="navLogo" to="/">
           <h1>chrōma</h1>
@@ -14,13 +14,7 @@ const NavBar = () => {
         </li>
         <li className="toggle">
           Greyscale
-          {/* <button>toggle</button> */}
-          <div id="darkmode-section">
-            <label id="darkmode-label" for="darkmode">
-              <input id="darkmode-input" type="checkbox" />
-              <span id="darkmode-toggle"></span>
-            </label>
-          </div>
+          <Toggle />
         </li>
       </ul>
     </nav>

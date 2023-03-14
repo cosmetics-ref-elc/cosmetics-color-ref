@@ -1,20 +1,21 @@
 import { Link } from 'react-router-dom';
-
-export default function CategoryCard({ categories }) {
-
-    const category_cards = categories.map(cat =>
-        <div
-            key={cat._id}
-            className={cat.name}
-        >
-            <h1>{cat.name}</h1>
-            <button><Link to={"/category/" + cat.name.toLowerCase()} state={cat}>{cat.name}</Link></button>
-        </div >
-    );
+import placeholderImg from '../assets/LandingPage/Lips.jpg'
+const CategoryCard = ({ categories }) => {
+    const category_cards = categories.map((cat) => (
+      <div key={cat._id} id={cat.name} className="catCards">
+        <Link to={"/category/" + cat.name.toLowerCase()} state={cat}>
+          {/* placeholder images for now */}
+          <img src={placeholderImg} alt={cat.name} className="catCardsImg" />
+          <h3>{cat.name}</h3>
+        </Link>
+      </div>
+    ));
 
     return (
-        <div className="CategoryCard">
+        <div className="categoryCard">
             {category_cards}
         </div>
     )
 }
+
+export default CategoryCard;
