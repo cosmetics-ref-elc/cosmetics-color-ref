@@ -317,6 +317,9 @@ footer {
   display: flex;
   flex-wrap: nowrap;
 }
+.mainNav .switch {
+  margin-left: 10px;
+}
 
 .landingPage header {
   display: flex;

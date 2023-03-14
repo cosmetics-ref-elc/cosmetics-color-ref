@@ -11,7 +11,7 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <p>
-            Copyright 2023 chrōma |{" "}
+            ©2023 <b>chrōma</b> |{" "}
             <a href="https://github.com/cosmetics-ref-elc/cosmetics-color-ref">
               {" "}
               Link to Repo
