@@ -1,3 +1,9 @@
+import { useLocation } from "react-router";
+// import { useState, useEffect } from 'react';
+// import * as productsAPI from '../utilities/products-api';
+
+
+
 // ProductPage psuedocode (one page for ALL products)
 // - Brand Name
 // - Product Name 
@@ -19,10 +25,23 @@
 
 const ProductPage = () => {
 
+  const location = useLocation()
+  const product = location.state;
+  // const [products, setProducts] = useState([]);
 
+  console.log(product)
+  // useEffect(function () {
+  //       async function getProducts() {
+  //           const products = await categoriesAPI.getById(category._id);
+  //           setProducts(products)
+  //       }
+  //       console.log(products)
+  //       getProducts()
+  //   }, [])
 
   return (
     <section className="productPage">
+      <h2>{product.name}</h2>
       <div className="mainInfo">
         {/* Brand */}
         <p>{ }</p>
