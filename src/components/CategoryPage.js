@@ -2,39 +2,35 @@ import { useLocation } from "react-router";
 import { useState, useEffect } from 'react';
 import * as categoriesAPI from '../utilities/categories-api';
 import ProductCard from './ProductCard';
-// import ProductPage from "./ProductPage";
-
-// CategoryPage pseudocode (one page for both eyes and lips)
-// - In the productCard:
-//     - image 
-//     - brand
-//     - name of product 
-//     - how many shades
-//     - swatch img
-// - when user clicks on a productCard, it calls API (take the name of the product)
-// (onClick)
+import { Link } from 'react-router-dom';
 
 const CategoryPage = () => {
-    // For now, created the state and basic function here, which can be called when the products are clicked! 
-    // const [isClicked, setIsClicked] = useState(false);
-    // const handleProductsClick = () => {
-    //   setIsClicked(true);
-    // };
 
-    const location = useLocation()
+    const location = useLocation();
     const category = location.state;
-    console.log(category)
+    // console.log(category);
 
     const [products, setProducts] = useState([]);
 
     useEffect(function () {
         async function getProducts() {
-            const products = await categoriesAPI.getById(category._id);
-            setProducts(products)
+            const categories = await categoriesAPI.getById(category._id);
+            setProducts(categories)
         }
-        console.log(products)
         getProducts()
     }, [])
+
+    // if (products.length) {
+    //     const product_cards = products[0].products.map(product =>
+    //         <li
+    //             key={product._id}
+    //             className={product.name}
+    //         >
+    //             <h1>{product.name}</h1>
+    //             <button><Link to={"/product/" + product.name.toLowerCase()} state={product}>Go To Product</Link></button>
+    //         </li >
+    //     );
+    // }
 
     return (
         <section className="categoryPage">
@@ -55,11 +51,8 @@ const CategoryPage = () => {
                         SWATCH IMAGE: 
                         <img src={ } alt="" />
                 </li> */}
-
-                <ProductCard products={products} />
+                {products.length ? (<ProductCard products={products} />) : null}
             </ul>
-
-            {/* {isClicked && <ProductPage/>} */}
         </section>
     )
 }
