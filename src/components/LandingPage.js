@@ -20,7 +20,7 @@ const LandingPage = () => {
       <header>
         <h2>Cosmetic Color Reference</h2>
         <p className="shortDesc">
-          Short description explaining what this app does and who it serves. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolores ut, natus praesentium quibusdam?
+          Short description explaining what this app does and who it serves. 
           {/* is this going to have an expandable 'learn more' thing? */}
         </p>
       </header>
