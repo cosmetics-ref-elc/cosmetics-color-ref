@@ -1,6 +1,8 @@
-@use "./partials/baseStyle";
-@use "./partials/headerAndNav";
-
-h1 {
-  color: black;
-}
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/setup";
+@use "./partials/baseStyles";
+@use "./partials/nav";
+@use "./partials/landingPage";
+@use "./partials/categoryCard";
+@use "./partials/footer";

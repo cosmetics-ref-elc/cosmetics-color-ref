@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+.mainNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $secondaryColor;
+  padding: 15px 65px;
+  position: relative;
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .navLogo {
+    color: $logoColor;
+    h1 {
+      margin: 0 auto;
+      font-size: 40px;
+      line-height: (48.41 / 40);
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    li {
+      font-size: 20px;
+      line-height: (28 / 20);
+    }
+    .toggle {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+}
