@@ -39,8 +39,8 @@ const LandingPage = () => {
   return (
     <section className="landingPage">
       <header>
-        <Link to="/">
-          <h1>Chrōma</h1>
+        <Link className="logo" to="/">
+          <h1>chrōma</h1>
         </Link>
         <NavBar />
       </header>

@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+html {
+  background-color: $primaryColor;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}

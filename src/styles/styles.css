@@ -1,0 +1,36 @@
+html {
+  background-color: #f5f5f5;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fefefe;
+}
+header .logo {
+  text-decoration: none;
+}
+header .logo h1 {
+  margin-top: 0;
+  font-size: 40px;
+  line-height: 1.21025;
+}
+
+.mainNav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+}
+
+h1 {
+  color: black;
+}/*# sourceMappingURL=styles.css.map */

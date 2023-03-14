@@ -1,6 +1,17 @@
+@use "./variables" as *;
+
 header {
   display: flex;
   justify-content: space-between;
+  background-color: $secondaryColor;
+  .logo {
+    text-decoration: none;
+    h1 {
+      margin-top: 0;
+      font-size: 40px;
+      line-height: (48.41 / 40);
+    }
+  }
 }
 
 .mainNav {
