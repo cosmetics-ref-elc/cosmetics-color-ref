@@ -1,5 +1,5 @@
 import { useLocation } from "react-router";
-// import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 // import * as productsAPI from '../utilities/products-api';
 
 
@@ -27,28 +27,28 @@ const ProductPage = () => {
 
   const location = useLocation()
   const product = location.state;
-  // const [products, setProducts] = useState([]);
-
   console.log(product)
-  // useEffect(function () {
-  //       async function getProducts() {
-  //           const products = await categoriesAPI.getById(category._id);
-  //           setProducts(products)
-  //       }
-  //       console.log(products)
-  //       getProducts()
-  //   }, [])
+
+  const [activeShade, setActiveShade] = useState({});
+  const shadesRef = useRef([])
+
+  console.log(product.shades)
+  useEffect(function () {
+    shadesRef.current = [...product.shades]
+    console.log("This is shadesRef " + shadesRef.current)
+    setActiveShade(shadesRef.current[0])
+  }, [])
 
   return (
     <section className="productPage">
       <h2>{product.name}</h2>
       <div className="mainInfo">
         {/* Brand */}
-        <p>{ }</p>
+        <p>{product.brand}</p>
         {/* Product Name */}
         <p>{ }</p>
         {/* Color Name */}
-        <h2>{ }</h2>
+        <h2>{shadesRef.current.name}</h2>
 
         {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
       </div>
@@ -59,7 +59,7 @@ const ProductPage = () => {
         {/* the 'tab' might need to be a button? */}
         <div className="tab">
           <h4>Color Description</h4>
-          <p>{ }</p>
+          <p>{shadesRef.current.description}</p>
         </div>
         <div className="tab">
           <h4>Finding Earthy Tones</h4>
@@ -73,15 +73,15 @@ const ProductPage = () => {
       <div className="otherInfo">
         <div className="infoSection">
           <h3>Product Description</h3>
-          <p>{ }</p>
+          <p>{product.description}</p>
         </div>
         <div className="infoSection">
           <h3>How to Use</h3>
-          <p>{ }</p>
+          <p>{product.usage}</p>
         </div>
         <div className="infoSection">
           <h3>Ingredients</h3>
-          <p>{ }</p>
+          <p>{product.ingredients}</p>
         </div>
       </div>
     </section>
