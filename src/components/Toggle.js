@@ -1,23 +1,28 @@
 import Switch from "react-switch";
 import { useState } from "react";
+import { useGray } from "../context/ToggleGrayscale";
 
 const Toggle = () => {
+  const { handleGray } = useGray();
   const [checked, setChecked] = useState(false);
+
   const handleChange = (nextChecked) => {
     setChecked(nextChecked);
+    handleGray();
   };
 
   return (
     <div className="switch">
-        {/* https://github.com/markusenglund/react-switch#readme */}
-        <label>
-            <Switch
-            onChange={handleChange}
-            checked={checked}
-            onColor="#000"
-            className="reactSwitch"
-            />
-        </label>
+      {/* https://github.com/markusenglund/react-switch#readme */}
+      <label>
+        <span className="sr-only">Switch to toggle Greyscale</span>
+        <Switch
+          onChange={handleChange}
+          checked={checked}
+          onColor="#000"
+          className="reactSwitch"
+        />
+      </label>
     </div>
   );
 };

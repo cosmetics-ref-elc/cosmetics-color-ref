@@ -9,11 +9,14 @@ const NavBar = () => {
         </Link>
       </div>
       <ul>
-        <li>
+        {/* COME BACK TO THIS! */}
+        {/* <li>
           <Link to="/category-page">Product Category</Link>
-        </li>
+        </li> */}
+        {/* in MOBILE, bring it BELOW logo */}
         <li className="toggle">
-          Greyscale
+          {/* maybe have text switch between Grayscale and Color? In that case might need to bring the handleChange into this component */}
+          Grayscale
           <Toggle />
         </li>
       </ul>
