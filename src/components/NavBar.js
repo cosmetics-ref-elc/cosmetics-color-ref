@@ -15,7 +15,8 @@ const NavBar = () => {
         </li> */}
         {/* in MOBILE, bring it BELOW logo */}
         <li className="toggle">
-          Greyscale
+          {/* maybe have text switch between Grayscale and Color? In that case might need to bring the handleChange into this component */}
+          Grayscale
           <Toggle />
         </li>
       </ul>
