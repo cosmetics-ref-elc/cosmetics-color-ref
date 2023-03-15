@@ -10,6 +10,7 @@ const LandingPage = () => {
     async function getCategories() {
       const categories = await categoriesAPI.getAll();
       setCategories(categories)
+      console.log(categories)
     }
     getCategories()
     console.log('I only fire once!')
@@ -20,7 +21,7 @@ const LandingPage = () => {
       <header>
         <h2>Cosmetic Color Reference</h2>
         <p className="shortDesc">
-          Short description explaining what this app does and who it serves. 
+          Short description explaining what this app does and who it serves.
           {/* is this going to have an expandable 'learn more' thing? */}
         </p>
       </header>

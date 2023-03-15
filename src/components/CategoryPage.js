@@ -20,12 +20,15 @@ const CategoryPage = () => {
 
     return (
         <section className="categoryPage">
-            <h2>{category.name}</h2>
+            <header>
+                <h2>{category.name}</h2>
+            </header>
+
             {/* I'm thinking of an empty ul in here so that whatever products we have listed in our database can be displayed here as an li */}
             {/* We'll need to create some kind of forEach or map function so that we can get it displayed accordingly!! */}
-            <ul className="productSelections">
+            <div className="products">
                 {products.length ? (<ProductCard products={products} />) : null}
-            </ul>
+            </div>
         </section>
     )
 }
