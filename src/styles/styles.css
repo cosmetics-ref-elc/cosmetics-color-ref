@@ -291,6 +291,11 @@ footer {
   padding: 10px 65px;
   position: relative;
 }
+@media (max-width: 760px) {
+  .mainNav {
+    padding: 10px 20px;
+  }
+}
 .mainNav .logo {
   position: absolute;
   top: 50%;
@@ -309,17 +314,26 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  padding: 0;
 }
 .mainNav ul li {
   font-size: 20px;
   line-height: 1.4;
 }
-.mainNav ul .toggle {
-  display: flex;
-  flex-wrap: nowrap;
-}
 .mainNav .switch {
-  margin-left: 10px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.mainNav .switch p {
+  margin: 0 auto;
+}
+@media (max-width: 680px) {
+  .mainNav .switch p {
+    display: none;
+  }
 }
 
 .landingPage header {

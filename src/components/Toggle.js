@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useGray } from "../context/ToggleGrayscale";
 
 const Toggle = () => {
-  const { handleGray } = useGray();
+  const { handleGray, isActive } = useGray();
   const [checked, setChecked] = useState(false);
 
   const handleChange = (nextChecked) => {
@@ -12,10 +12,15 @@ const Toggle = () => {
   };
 
   return (
+    // Is this confusing? If so, I'll put it back to the way it was before
     <div className="switch">
+      {isActive
+        ? <p>Color</p>
+        : <p>Grayscale</p>
+    }
       {/* https://github.com/markusenglund/react-switch#readme */}
       <label>
-        <span className="sr-only">Switch to toggle Greyscale</span>
+        <span className="sr-only">Switch to toggle between Grayscale and Color</span>
         <Switch
           onChange={handleChange}
           checked={checked}
