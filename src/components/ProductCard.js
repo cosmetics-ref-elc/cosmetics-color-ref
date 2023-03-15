@@ -8,8 +8,11 @@ export default function ProductCard({ products }) {
             key={product._id}
             className={product.name}
         >
-            <h1>{product.name}</h1>
-            <button><Link to={"/product/" + product.name.toLowerCase()} state={product}>Go To Product</Link></button>
+            <Link to={"/product/" + product.name.toLowerCase()} state={product}>
+                <h1>{product.name}</h1>
+                <h2>{product.brand}</h2>
+                <p>Shades: {product.shades.length}</p>
+            </Link>
         </li >
     );
 
