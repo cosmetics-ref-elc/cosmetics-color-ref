@@ -1,19 +1,23 @@
 export default function ShadeList({ shades, activeShade, setActiveShade }) {
-    console.log(shades)
-    // const shade_els = shades.map(shade => {
-    //     // console.log(`this is shade: ` + shade)
-    //     //     < option
-    //     // key = {}
-    //     // value = {}
-    //     // className = 'activeShade'
-    //     //     >
-    //     // </option >
-    // });
 
+    console.log(shades[0])
+
+    const shadesDropdown = shades.map((shade) => (
+        <option key={shade._id} value={shade._id}>
+            <div>
+                <img src={shade.swatch_img} alt={shade.name} style={{ width: '30px', marginRight: '10px' }} />
+                <p>{shade.name}</p>
+            </div>
+        </option>
+    ))
 
     return (
-        <select className="CategoryList">
-            {/* {shade_els} */}
+        <select
+            className="CategoryList"
+            value={activeShade?._id}
+            onChange={(e) => setActiveShade(shades.find((shade) => shade._id === e.target.value))}
+        >
+            {shadesDropdown}
         </select>
-    )
+    );
 }

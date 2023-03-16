@@ -1,73 +1,152 @@
 import { useLocation } from "react-router";
 import { useState, useEffect, useRef } from 'react';
-// import ShadeList from './ShadeList'
+import { useGray } from "../context/ToggleGrayscale";
+import ShadeList from './ShadeList'
+import ShadeImage from './ShadeImage'
 
 const ProductPage = () => {
-
+  const { isActive } = useGray();
   const location = useLocation()
   const product = location.state;
   console.log(product)
 
-  const [activeShade, setActiveShade] = useState({});
-  const shadesRef = useRef([])
+  const [activeShade, setActiveShade] = useState(product.shades[0]);
+  const [activeImage, setActiveImage] = useState('');
+  const [activeTab, setActiveTab] = useState("colorDescription");
+
+  const shadesRef = useRef([]);
+  const imagesRef = useRef([]);
 
   useEffect(
     function () {
       shadesRef.current = product.shades;
       setActiveShade(shadesRef.current[0]);
     },
-    [product.shades]
+    []
   );
+
+  useEffect(() => {
+    if (Object.keys(activeShade).length === 0) {
+      return;
+    }
+    imagesRef.current = activeShade.img_urls;
+    setActiveImage(imagesRef.current[0]);
+  }, [activeShade]);
 
   return (
     <section className="productPage">
-      <p>{product.brand}</p>
-      <h3>{product.name}</h3>
+
 
       <div className="mainInfo">
+        <p>{product.brand}</p>
+        <h3>{product.name}</h3>
+        <h2>{activeShade?.name}</h2>
+      </div>
 
-        <h2>{activeShade.name}</h2>
 
+
+
+      <div className="displayImage">
+        <img
+          src={activeImage}
+          alt={activeImage}
+          className=""
+          style={{ width: "200px", height: "250px", filter: isActive ? "grayscale(100%)" : "none" }}
+        ></img>
+      </div>
+
+
+      <div className="imageCarousel">
+        {/* sorry, didn't have time to populate this section */}
+        <ShadeImage
+          images={imagesRef.current}
+          activeImage={activeImage}
+          setActiveImage={setActiveImage}
+        />
+      </div>
+
+
+      <div className="dropdownMenu">
         {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
-        {/* <ShadeList
+        <ShadeList
           shades={shadesRef.current}
           activeShade={activeShade}
           setActiveShade={setActiveShade}
-        /> */}
+        />
       </div>
-      <div className="imageCarousel">
-        {/* sorry, didn't have time to populate this section */}
-      </div>
+
       <div className="colorTabs">
-        {/* the 'tab' might need to be a button? */}
+        <div className={`tab ${activeTab === "colorDescription" ? "active" : ""}`} onClick={() => setActiveTab("colorDescription")}>
+          <h4>Color Description</h4>
+        </div>
+        <div className={`tab ${activeTab === "colorStory" ? "active" : ""}`} onClick={() => setActiveTab("colorStory")}>
+          <h4>Finding Earthy Tones</h4>
+        </div>
+        <div className={`tab ${activeTab === "colorSupportInfo" ? "active" : ""}`} onClick={() => setActiveTab("colorSupportInfo")}>
+          <h4>Color Support Information</h4>
+        </div>
+      </div>
+
+      {activeTab === "colorDescription" && (
+        <div className="tabContent">
+          <p>{activeShade.description}</p>
+        </div>
+      )}
+
+      {activeTab === "colorStory" && (
+        <div className="tabContent">
+          <p>{activeShade.color_story}</p>
+        </div>
+      )}
+
+      {activeTab === "colorSupportInfo" && (
+        <div className="tabContent">
+          {activeShade.color_support_info.map((info) => (
+            <p>{info}</p>
+          ))}
+        </div>
+      )}
+
+      {/* <div className="colorTabs">
         <div className="tab">
           <h4>Color Description</h4>
-          {/* <p>{shadesRef.current.description}</p> */}
+          <p>{activeShade.description}</p>
         </div>
+
+
         <div className="tab">
           <h4>Finding Earthy Tones</h4>
-          <p>{ }</p>
+          <p>{activeShade.color_story}</p>
         </div>
+
+
         <div className="tab">
           <h4>Color Support Information</h4>
-          <p>{ }</p>
+          {activeShade.color_support_info.map(info =>
+            <p>{info}</p>
+          )}
         </div>
-      </div>
-      <div className="otherInfo">
+      </div> */}
+
+      < div className="otherInfo" >
         <div className="infoSection">
           <h3>Product Description</h3>
-          <p>{product.description}</p>
+          {product.description.map(info =>
+            <p>{info}</p>
+          )}
         </div>
         <div className="infoSection">
           <h3>How to Use</h3>
-          <p>{product.usage}</p>
+          {product.usage.map(info =>
+            <p>{info}</p>
+          )}
         </div>
         <div className="infoSection">
           <h3>Ingredients</h3>
           <p>{product.ingredients}</p>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }
 
