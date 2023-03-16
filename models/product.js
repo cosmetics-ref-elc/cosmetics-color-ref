@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const shadeSchema = new Schema({
     name: { type: String, required: true },
     color_alt_names: { type: String, required: true },
-    description: { type: Array, required: true },
+    description: { type: String, required: true },
     color_story: { type: String, required: true },
     color_support_info: { type: Array, required: true },
     swatch_img: { type: String, required: true },

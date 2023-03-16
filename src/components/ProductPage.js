@@ -1,8 +1,6 @@
 import { useLocation } from "react-router";
 import { useState, useEffect, useRef } from 'react';
-// import * as productsAPI from '../utilities/products-api';
-
-
+import ShadeList from './ShadeList'
 
 // ProductPage psuedocode (one page for ALL products)
 // - Brand Name
@@ -19,38 +17,40 @@ import { useState, useEffect, useRef } from 'react';
 //     - Finding earthy tones
 //     - Color Support Information
 //     - 5 different images 
-
-
 // import { useState } from "react";
 
 const ProductPage = () => {
 
   const location = useLocation()
   const product = location.state;
-  console.log(product)
+  // console.log(product)
 
   const [activeShade, setActiveShade] = useState({});
   const shadesRef = useRef([])
-
-  console.log(product.shades)
+  // console.log(shadesRef)
+  // console.log(product.shades)
   useEffect(function () {
-    shadesRef.current = [...product.shades]
-    console.log("This is shadesRef " + shadesRef.current)
+    shadesRef.current = product.shades
+    console.log(shadesRef.current)
     setActiveShade(shadesRef.current[0])
   }, [])
 
+  console.log("This is activeShade: " + activeShade)
+
   return (
     <section className="productPage">
-      <h2>{product.name}</h2>
+      <p>{product.brand}</p>
+      <h3>{product.name}</h3>
+
       <div className="mainInfo">
-        {/* Brand */}
-        <p>{product.brand}</p>
-        {/* Product Name */}
-        <p>{ }</p>
-        {/* Color Name */}
-        <h2>{shadesRef.current.name}</h2>
+        <h2>{activeShade.name}</h2>
 
         {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
+        {/* <ShadeList
+          shades={shadesRef.current}
+          activeShade={activeShade}
+          setActiveShade={setActiveShade}
+        /> */}
       </div>
       <div className="imageCarousel">
         {/* sorry, didn't have time to populate this section */}
