@@ -22,7 +22,7 @@ export default function ProductCard({ products }) {
                 />
                 <h3>{product.name}</h3>
                 <h4>{product.brand}</h4>
-                <p>Shades: {product.shades.length}</p>
+                <p>{product.shades.length} Shades</p>
                 <img
                     // src={placeholderImg}
                     // src={images[cat.name.toLowerCase()]}
