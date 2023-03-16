@@ -1,6 +1,6 @@
 import { useLocation } from "react-router";
 import { useState, useEffect, useRef } from 'react';
-import ShadeList from './ShadeList'
+// import ShadeList from './ShadeList'
 
 const ProductPage = () => {
 
