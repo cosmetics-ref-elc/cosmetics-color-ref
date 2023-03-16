@@ -27,13 +27,16 @@ const ProductPage = () => {
 
   const [activeShade, setActiveShade] = useState({});
   const shadesRef = useRef([])
-  // console.log(shadesRef)
-  // console.log(product.shades)
-  useEffect(function () {
-    shadesRef.current = product.shades
-    console.log(shadesRef.current)
-    setActiveShade(shadesRef.current[0])
-  }, [])
+
+  console.log(product.shades)
+  useEffect(
+    function () {
+      shadesRef.current = [...product.shades];
+      console.log("This is shadesRef " + shadesRef.current);
+      setActiveShade(shadesRef.current[0]);
+    },
+    [product.shades]
+  );
 
   console.log("This is activeShade: " + activeShade)
 
@@ -59,7 +62,7 @@ const ProductPage = () => {
         {/* the 'tab' might need to be a button? */}
         <div className="tab">
           <h4>Color Description</h4>
-          <p>{shadesRef.current.description}</p>
+          {/* <p>{shadesRef.current.description}</p> */}
         </div>
         <div className="tab">
           <h4>Finding Earthy Tones</h4>
