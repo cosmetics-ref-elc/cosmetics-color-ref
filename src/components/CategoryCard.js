@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useGray } from "../context/ToggleGrayscale";
+
 const CategoryCard = ({ categories }) => {
   const { isActive } = useGray();
 

@@ -33,11 +33,14 @@ const ProductPage = () => {
   const shadesRef = useRef([])
 
   console.log(product.shades)
-  useEffect(function () {
-    shadesRef.current = [...product.shades]
-    console.log("This is shadesRef " + shadesRef.current)
-    setActiveShade(shadesRef.current[0])
-  }, [])
+  useEffect(
+    function () {
+      shadesRef.current = [...product.shades];
+      console.log("This is shadesRef " + shadesRef.current);
+      setActiveShade(shadesRef.current[0]);
+    },
+    [product.shades]
+  );
 
   return (
     <section className="productPage">
@@ -48,7 +51,7 @@ const ProductPage = () => {
         {/* Product Name */}
         <p>{ }</p>
         {/* Color Name */}
-        <h2>{shadesRef.current.name}</h2>
+        <h2>{product.shades[0].name}</h2>
 
         {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
       </div>
@@ -59,7 +62,7 @@ const ProductPage = () => {
         {/* the 'tab' might need to be a button? */}
         <div className="tab">
           <h4>Color Description</h4>
-          <p>{shadesRef.current.description}</p>
+          {/* <p>{shadesRef.current.description}</p> */}
         </div>
         <div className="tab">
           <h4>Finding Earthy Tones</h4>
