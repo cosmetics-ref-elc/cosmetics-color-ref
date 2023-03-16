@@ -1,5 +1,5 @@
 const Category = require('../../models/category');
-const Product = require('../../models/product');
+// const Product = require('../../models/product');
 
 module.exports = {
     index,
@@ -8,6 +8,7 @@ module.exports = {
 
 async function index(req, res) {
     const categories = await Category.find({})
+    res.setHeader("Content-Type", "application/json");
     res.json(categories);
 }
 
@@ -27,5 +28,6 @@ async function show(req, res) {
             }
         ]
     )
+    res.setHeader("Content-Type", "application/json");
     res.json(data);
 }

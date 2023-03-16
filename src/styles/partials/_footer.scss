@@ -1,14 +1,23 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 footer {
   width: 100%;
+  @include mobile{
+    bottom:-65%;
+  }
   .footerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #e1e1e1;
     margin: 0 70px;
-    // are the footer fonts too small?
+
+
+    @include mobile{
+      flex-direction: column;
+    }
+   
     h3 {
       font-size: 14px;
     }
