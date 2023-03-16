@@ -15,7 +15,8 @@
   gap: 15px;
   .prodCards {
     @include cardStyle;
-    height: 484px;
+    // height: 484px;
+    height: 600px;
     text-align: left;
     display: flex;
     flex-direction: column;

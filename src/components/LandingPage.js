@@ -26,7 +26,9 @@ const LandingPage = () => {
       </header>
       <div className="categories">
         <h3>Browse Product Categories</h3>
-        <CategoryCard categories={categories} />
+        <ul>
+          <CategoryCard categories={categories} />
+        </ul>
       </div>
     </section>
   );
