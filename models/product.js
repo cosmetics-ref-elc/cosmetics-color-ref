@@ -13,8 +13,8 @@ const shadeSchema = new Schema({
 const productSchema = new Schema({
     name: { type: String, required: true },
     brand: { type: String, required: true },
-    // img: { type: String, required: true },
-    // swatch_img: { type: String },
+    img: { type: String, required: true },
+    swatch_img: { type: String },
     category: { type: Schema.Types.ObjectId, ref: 'Category', required: true },
     shades: [shadeSchema],
     description: { type: String },

@@ -22,7 +22,7 @@ const CategoryPage = () => {
             <h2>{category.name}</h2>
             <ul className="productSelections">
                 {products.length ? (<ProductCard products={products} />) : null}
-            </ul>
+            </div>
         </section>
     )
 }
