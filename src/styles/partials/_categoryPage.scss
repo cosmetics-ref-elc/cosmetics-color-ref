@@ -1,0 +1,50 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.categoryPage {
+  @include flexDefault;
+  .productSelections {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 0;
+  }
+}
+
+.productCard {
+  display: flex;
+  gap: 15px;
+  .prodCards {
+    @include cardStyle;
+    height: 484px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .imgContainer {
+      flex-basis: 50%;
+      .prodCardsImg {
+        margin-top: 10px;
+      }
+    }
+    .textContainer {
+      flex-basis: 50%;
+      padding: 20px;
+      padding-bottom: 40px;
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: (24 / 16);
+      }
+      h3 {
+        font-size: 25px;
+        // font-size: 28px; // can this be smaller so it can all fit?
+        // line-height: (30 / 28);
+        font-weight: 400;
+      }
+    }
+    .swatchContainer {
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+}

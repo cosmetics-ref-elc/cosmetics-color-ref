@@ -15,7 +15,7 @@ const CategoryCard = ({ categories }) => {
           className="catCardsImg"
           style={{ filter: isActive ? "grayscale(100%)" : "none" }}
         />
-        <h3>{cat.name}</h3>
+        <h4>{cat.name}</h4>
       </Link>
     </div>
   ));
