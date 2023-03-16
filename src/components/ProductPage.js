@@ -28,17 +28,13 @@ const ProductPage = () => {
   const [activeShade, setActiveShade] = useState({});
   const shadesRef = useRef([])
 
-  console.log(product.shades)
   useEffect(
     function () {
-      shadesRef.current = [...product.shades];
-      console.log("This is shadesRef " + shadesRef.current);
+      shadesRef.current = product.shades;
       setActiveShade(shadesRef.current[0]);
     },
     [product.shades]
   );
-
-  console.log("This is activeShade: " + activeShade)
 
   return (
     <section className="productPage">
@@ -46,6 +42,7 @@ const ProductPage = () => {
       <h3>{product.name}</h3>
 
       <div className="mainInfo">
+
         <h2>{activeShade.name}</h2>
 
         {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
