@@ -44,8 +44,6 @@ const ProductPage = () => {
 
   return (
     <section className="productPage">
-      {/* testing - don't actually use */}
-      {activeShade && <div>hi</div>}
       <h2>{product.name}</h2>
       <div className="mainInfo">
         {/* Brand */}
@@ -53,7 +51,7 @@ const ProductPage = () => {
         {/* Product Name */}
         <p>{ }</p>
         {/* Color Name */}
-        {/* <h2>{shadesRef.current.name}</h2> */}
+        <h2>{product.shades[0].name}</h2>
 
         {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
       </div>
