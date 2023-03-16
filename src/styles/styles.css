@@ -282,6 +282,14 @@ footer {
   bottom: 0;
 }
 
+h2 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.0625;
+  letter-spacing: 0.5px;
+  margin: 50px auto 35px;
+}
+
 .mainNav {
   display: flex;
   justify-content: flex-end;
@@ -290,6 +298,11 @@ footer {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 65px;
   position: relative;
+}
+@media (max-width: 760px) {
+  .mainNav {
+    padding: 10px 20px;
+  }
 }
 .mainNav .logo {
   position: absolute;
@@ -309,17 +322,26 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  padding: 0;
 }
 .mainNav ul li {
   font-size: 20px;
   line-height: 1.4;
 }
-.mainNav ul .toggle {
-  display: flex;
-  flex-wrap: nowrap;
-}
 .mainNav .switch {
-  margin-left: 10px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.mainNav .switch p {
+  margin: 0 auto;
+}
+@media (max-width: 680px) {
+  .mainNav .switch p {
+    display: none;
+  }
 }
 
 .landingPage header {
@@ -327,12 +349,6 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.landingPage header h2 {
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1.0625;
-  margin: 50px auto 35px;
 }
 .landingPage header .shortDesc {
   font-size: 18px;
@@ -344,6 +360,9 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.landingPage .categories ul {
+  padding-left: 0;
 }
 .landingPage .categories h3 {
   font-size: 24px;
@@ -362,7 +381,7 @@ footer {
   text-align: center;
   background-color: #fff;
 }
-.landingPage .categoryCard .catCards h3 {
+.landingPage .categoryCard .catCards h4 {
   font-size: 32px;
   line-height: 1.25;
   font-weight: 400;
@@ -370,6 +389,61 @@ footer {
 .landingPage .categoryCard .catCards .catCardsImg {
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.categoryPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.categoryPage .productSelections {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 0;
+}
+
+.productCard {
+  display: flex;
+  gap: 15px;
+}
+.productCard .prodCards {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 2px solid #000000;
+  width: 310px;
+  height: 366px;
+  text-align: center;
+  background-color: #fff;
+  height: 600px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.productCard .prodCards .imgContainer {
+  flex-basis: 50%;
+}
+.productCard .prodCards .imgContainer .prodCardsImg {
+  margin-top: 10px;
+}
+.productCard .prodCards .textContainer {
+  flex-basis: 50%;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+.productCard .prodCards .textContainer p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.productCard .prodCards .textContainer h3 {
+  font-size: 25px;
+  font-weight: 400;
+}
+.productCard .prodCards .swatchContainer {
+  position: absolute;
+  bottom: -1px;
 }
 
 footer {

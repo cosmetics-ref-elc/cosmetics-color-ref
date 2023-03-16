@@ -1,43 +1,42 @@
 import { Link } from 'react-router-dom';
 import { useGray } from "../context/ToggleGrayscale";
 
-export default function ProductCard({ products }) {
-
+const ProductCard = ({ products }) => {
     const { isActive } = useGray();
-
-
-    const product_cards = products[0].products.map(product =>
-        <div
-            key={product._id}
-            className="productCards"
-        >
-            <Link to={"/product/" + product.name.toLowerCase()} state={product}>
-                <img
-                    // src={placeholderImg}
-                    // src={images[cat.name.toLowerCase()]}
-                    src={product.img}
-                    alt={product.name}
-                    className="productCardsImg"
-                    style={{ filter: isActive ? "grayscale(100%)" : "none" }}
-                />
-                <h3>{product.name}</h3>
-                <h4>{product.brand}</h4>
-                <p>{product.shades.length} Shades</p>
-                <img
-                    // src={placeholderImg}
-                    // src={images[cat.name.toLowerCase()]}
-                    src={product.swatch_img}
-                    alt={product.name}
-                    className="productCardsSwatchImg"
-                    style={{ filter: isActive ? "grayscale(100%)" : "none" }}
-                />
-            </Link>
-        </div >
-    );
-
+    
+    const product_cards = products[0].products.map((product) => (
+      <li key={product._id} id={product.name} className="prodCards">
+        <Link to={"/product/" + product.name.toLowerCase()} state={product}>
+          <div className="imgContainer">
+            <img
+              src={product.img}
+              alt={product.name}
+              className="prodCardsImg"
+              style={{ filter: isActive ? "grayscale(100%)" : "none" }}
+            />
+          </div>
+          <div className="textContainer">
+            <p>{product.brand}</p>
+            <h3>{product.name}</h3>
+            <p>Shades: {product.shades.length}</p>
+          </div>
+          <div className="swatchContainer">
+            <img
+              src={product.swatch_img}
+              alt={product.name}
+              className="fullSwatch productCardsSwatchImg"
+              style={{ filter: isActive ? "grayscale(100%)" : "none" }}
+            ></img>
+          </div>
+        </Link>
+      </li>
+    ));
+    
     return (
         <div className="productCard">
             {product_cards}
         </div>
     )
 }
+
+export default ProductCard;
