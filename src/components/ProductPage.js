@@ -2,28 +2,11 @@ import { useLocation } from "react-router";
 import { useState, useEffect, useRef } from 'react';
 import ShadeList from './ShadeList'
 
-// ProductPage psuedocode (one page for ALL products)
-// - Brand Name
-// - Product Name 
-// - Color Name
-// - Product Description
-// - How to use
-// - Ingredients
-// - Shades: (onChange)
-//     - Color Name
-//     - Swatch Image 
-//     - Color Alt Name
-//     - Color Description
-//     - Finding earthy tones
-//     - Color Support Information
-//     - 5 different images 
-// import { useState } from "react";
-
 const ProductPage = () => {
 
   const location = useLocation()
   const product = location.state;
-  // console.log(product)
+  console.log(product)
 
   const [activeShade, setActiveShade] = useState({});
   const shadesRef = useRef([])
