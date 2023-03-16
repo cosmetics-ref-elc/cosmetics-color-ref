@@ -16,17 +16,13 @@
   gap: 15px;
   .prodCards {
     @include cardStyle;
-    // height: 484px;
-    height: 600px;
+    height: auto;
     text-align: left;
     display: flex;
     flex-direction: column;
     position: relative;
     .imgContainer {
       flex-basis: 50%;
-      .prodCardsImg {
-        margin-top: 10px;
-      }
     }
     .textContainer {
       flex-basis: 50%;
@@ -39,8 +35,6 @@
       }
       h3 {
         font-size: 25px;
-        // font-size: 28px; // can this be smaller so it can all fit?
-        // line-height: (30 / 28);
         font-weight: 400;
       }
     }
