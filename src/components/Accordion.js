@@ -12,8 +12,8 @@ function Accordion({title, content}){
         <h3 onClick={toggleExpanded}>
           {title}
           <button
+          type="button"
           aria-expanded={expanded}
-          aria-controls={`${title}Content`}
           onClick={toggleExpanded}
           className={`accordionButton ${expanded ? 'expanded' : 'collapsed'}`}
         >
@@ -22,11 +22,9 @@ function Accordion({title, content}){
           </span>
           <span className="sr-only">{expanded ? 'Hide' : 'Show more'}</span>
         </button>
-        </h3>
-        <div id={`${title}Content`} hidden={!expanded}>
-            {content}
-        </div>
-      </div>
+      </h3>
+      {expanded && <div className="accordionContent">{content}</div>}
+    </div>
       )
     
 }
