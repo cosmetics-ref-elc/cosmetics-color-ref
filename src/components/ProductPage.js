@@ -42,7 +42,7 @@ const ProductPage = () => {
           src={activeImage}
           alt={activeImage}
           className=""
-          style={{ width: "200px", height: "250px", filter: isActive ? "grayscale(100%)" : "none" }}
+          style={{ filter: isActive ? "grayscale(100%)" : "none" }}
         ></img>
       </div>
 
@@ -61,12 +61,11 @@ const ProductPage = () => {
       <div className="mainInfo">
         <p>{product.brand}</p>
         <h3>{product.name}</h3>
-        <h2>{activeShade?.name}</h2>
+        {/* <h2>{activeShade?.name}</h2> */}
       </div>
 
 
       <div className="dropdownMenu">
-        {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
         <ShadeList
           shades={shadesRef.current}
           activeShade={activeShade}
