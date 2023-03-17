@@ -11,9 +11,21 @@ function Accordion({title, content}){
         <div className="infoSection">
         <h3 onClick={toggleExpanded}>
           {title}
-          {expanded ? '-' : '+'}
+          <button
+          aria-expanded={expanded}
+          aria-controls={`${title}Content`}
+          onClick={toggleExpanded}
+          className={`accordionButton ${expanded ? 'expanded' : 'collapsed'}`}
+        >
+          <span className="accordionIcon" aria-hidden="true">
+            {expanded ? '-' : '+'}
+          </span>
+          <span className="sr-only">{expanded ? 'Hide' : 'Show more'}</span>
+        </button>
         </h3>
-        {expanded && <div>{content}</div>}
+        <div id={`${title}Content`} hidden={!expanded}>
+            {content}
+        </div>
       </div>
       )
     
