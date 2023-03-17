@@ -36,7 +36,10 @@
 
 
     .textPart {
+       display:flex;
+       flex-direction: column;
         width: 65%;
+        
 
         .mainInfo {
             p {
@@ -58,17 +61,18 @@
             display: flex;
             align-items: flex-start;
             gap: 8px;
-            margin-top: 20px;
+           margin-top:20px;
+           margin-bottom: 40px;
 
             .tab {
                 border: 1px solid #222222;
                 box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
                 border-radius: 8px;
                 text-align: center;
-                padding: 8px;   
+                padding: 7px;
             }
 
-            .active{
+            .active {
                 background-color: rgb(232, 231, 231);
             }
 
@@ -76,9 +80,21 @@
                 font-size: 16px;
                 line-height: 24px;
                 font-weight: 400;
-                margin:0;
+                margin: 0;
             }
-        }
-    }
 
+
+        }
+
+
+        .tabContent {
+            border: 1px solid #222222;
+            border-radius: 8px;
+            padding: 8px 12px;
+            line-height: 24px;
+            background: #FFFFFF;
+        }
+
+
+    }
 }
