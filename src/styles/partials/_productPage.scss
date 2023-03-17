@@ -36,10 +36,10 @@
 
 
     .textPart {
-       display:flex;
-       flex-direction: column;
+        display: flex;
+        flex-direction: column;
         width: 65%;
-        
+
 
         .mainInfo {
             p {
@@ -61,8 +61,8 @@
             display: flex;
             align-items: flex-start;
             gap: 8px;
-           margin-top:20px;
-           margin-bottom: 40px;
+            margin-top: 20px;
+            margin-bottom: 40px;
 
             .tab {
                 border: 1px solid #222222;
@@ -95,10 +95,32 @@
             background: #FFFFFF;
         }
 
-        .otherInfo{
-            .accordionContent{
+        .otherInfo {
+            .accordionContent {
                 border-bottom: 1px solid #ABABAB;
+
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
+
+            h3 {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .accordionButton {
+                border: none;
+                background: none;
+                cursor: pointer;
+                padding: 0;
+                margin: 0;
+                font-size: 1em;
+                color: #333;
+            }
+
+
         }
 
 
