@@ -1,0 +1,21 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.theCreators {
+  .creatorsGrid {
+    .creatorCard {
+      .imgContainer {
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+  .socialsList {
+    .socials {
+      .icon {
+        width: 32px;
+      }
+    }
+  }
+}
