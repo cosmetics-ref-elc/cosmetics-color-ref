@@ -36,16 +36,7 @@ const ProductPage = () => {
   return (
     <section className="productPage">
 
-
-      <div className="mainInfo">
-        <p>{product.brand}</p>
-        <h3>{product.name}</h3>
-        <h2>{activeShade?.name}</h2>
-      </div>
-
-
-
-
+<div className="imagePart">
       <div className="displayImage">
         <img
           src={activeImage}
@@ -63,6 +54,14 @@ const ProductPage = () => {
           activeImage={activeImage}
           setActiveImage={setActiveImage}
         />
+      </div>
+      </div>
+
+    <div className="textPart">
+      <div className="mainInfo">
+        <p>{product.brand}</p>
+        <h3>{product.name}</h3>
+        <h2>{activeShade?.name}</h2>
       </div>
 
 
@@ -146,6 +145,8 @@ const ProductPage = () => {
           <p>{product.ingredients}</p>
         </div>
       </div >
+
+      </div>
     </section >
   );
 }
