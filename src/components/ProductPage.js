@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useGray } from "../context/ToggleGrayscale";
 import ShadeList from './ShadeList'
 import ShadeImage from './ShadeImage'
+import Accordion from "./Accordion";
 
 const ProductPage = () => {
   const { isActive } = useGray();
@@ -13,6 +14,7 @@ const ProductPage = () => {
   const [activeShade, setActiveShade] = useState(product.shades[0]);
   const [activeImage, setActiveImage] = useState('');
   const [activeTab, setActiveTab] = useState("colorDescription");
+  
 
   const shadesRef = useRef([]);
   const imagesRef = useRef([]);
@@ -36,22 +38,13 @@ const ProductPage = () => {
   return (
     <section className="productPage">
 
-
-      <div className="mainInfo">
-        <p>{product.brand}</p>
-        <h3>{product.name}</h3>
-        <h2>{activeShade?.name}</h2>
-      </div>
-
-
-
-
+<div className="imagePart">
       <div className="displayImage">
         <img
           src={activeImage}
           alt={activeImage}
           className=""
-          style={{ width: "200px", height: "250px", filter: isActive ? "grayscale(100%)" : "none" }}
+          style={{ filter: isActive ? "grayscale(100%)" : "none" }}
         ></img>
       </div>
 
@@ -64,10 +57,17 @@ const ProductPage = () => {
           setActiveImage={setActiveImage}
         />
       </div>
+      </div>
+
+    <div className="textPart">
+      <div className="mainInfo">
+        <p>{product.brand}</p>
+        <h3>{product.name}</h3>
+        {/* <h2>{activeShade?.name}</h2> */}
+      </div>
 
 
       <div className="dropdownMenu">
-        {/* the DROPDOWN with the swatches here - sorry didn't have time for this */}
         <ShadeList
           shades={shadesRef.current}
           activeShade={activeShade}
@@ -129,7 +129,7 @@ const ProductPage = () => {
       </div> */}
 
       < div className="otherInfo" >
-        <div className="infoSection">
+        {/* <div className="infoSection">
           <h3>Product Description</h3>
           {product.description.map(info =>
             <p>{info}</p>
@@ -144,8 +144,13 @@ const ProductPage = () => {
         <div className="infoSection">
           <h3>Ingredients</h3>
           <p>{product.ingredients}</p>
-        </div>
+        </div> */}
+        <Accordion title="Product Description" content={product.description.map(info => <p>{info}</p>)} />
+        <Accordion title="How to Use" content={product.usage.map(info => <p>{info}</p>)} />
+        <Accordion title="Ingredients" content={<p>{product.ingredients}</p>} />
       </div >
+
+      </div>
     </section >
   );
 }

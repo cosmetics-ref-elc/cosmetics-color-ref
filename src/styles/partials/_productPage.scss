@@ -1,0 +1,106 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.productPage {
+    display: flex;
+    margin: 5% 10%;
+    gap: 6%;
+
+
+    .imagePart {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        gap: 10px;
+
+        .displayImage {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .imageCarousel {
+            div {
+                display: flex;
+                justify-content: space-between;
+
+                img {
+                    width: 45px !important;
+                    height: 45px !important;
+                }
+            }
+
+        }
+    }
+
+
+    .textPart {
+       display:flex;
+       flex-direction: column;
+        width: 65%;
+        
+
+        .mainInfo {
+            p {
+                margin: 0;
+            }
+
+            h3 {
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 38px;
+                margin: 15px auto;
+
+            }
+
+        }
+
+
+        .colorTabs {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+           margin-top:20px;
+           margin-bottom: 40px;
+
+            .tab {
+                border: 1px solid #222222;
+                box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+                border-radius: 8px;
+                text-align: center;
+                padding: 7px;
+            }
+
+            .active {
+                background-color: rgb(232, 231, 231);
+            }
+
+            h4 {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                margin: 0;
+            }
+
+
+        }
+
+
+        .tabContent {
+            border: 1px solid #222222;
+            border-radius: 8px;
+            padding: 8px 12px;
+            line-height: 24px;
+            background: #FFFFFF;
+        }
+
+        .otherInfo{
+            .accordionContent{
+                border-bottom: 1px solid #ABABAB;
+            }
+        }
+
+
+    }
+}
