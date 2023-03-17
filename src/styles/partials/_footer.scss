@@ -3,9 +3,7 @@
 
 footer {
   width: 100%;
-  @include mobile{
-    bottom:-65%;
-  }
+  
   .footerContainer {
     display: flex;
     justify-content: space-between;
@@ -16,6 +14,7 @@ footer {
 
     @include mobile{
       flex-direction: column;
+      
     }
    
     h3 {
