@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="copyright">
           <p>
             ©2023 <b>chrōma</b> |{" "}
-            <a href="https://github.com/cosmetics-ref-elc/cosmetics-color-ref">
+            <a href="https://github.com/cosmetics-ref-elc/cosmetics-color-ref" target="_blank" rel="noreferrer">
               {" "}
               Link to Repo
             </a>

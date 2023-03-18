@@ -7,7 +7,6 @@ const CategoryCard = ({ categories }) => {
   const category_cards = categories.map((cat) => (
     <li key={cat._id} id={cat.name} className="catCards">
       <Link to={"/category/" + cat.name.toLowerCase()} state={cat}>
-        {/* placeholder images for now */}
         <img
           src={cat.img}
           alt={cat.name}

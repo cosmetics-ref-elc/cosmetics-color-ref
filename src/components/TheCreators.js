@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useGray } from "../context/ToggleGrayscale";
-
 import caiyi from "../assets/TheCreators/caiyi.JPG";
 import chris from "../assets/TheCreators/chris.JPG";
 import heidi from "../assets/TheCreators/heidi.jpeg";
@@ -9,6 +8,7 @@ import neha from "../assets/TheCreators/neha.jpeg";
 import gitHubIcon from "../assets/TheCreators/GitHub.png";
 import linkedInIcon from "../assets/TheCreators/LinkedIn.png";
 import portfolioIcon from "../assets/TheCreators/Portfolio.png";
+
 const TheCreators = () => {
   const { isActive } = useGray();
   return (

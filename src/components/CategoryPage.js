@@ -14,7 +14,6 @@ const CategoryPage = () => {
         setProducts(categories);
       }
         getProducts();
-        // dependency array was erroring out so added it in**
     }, [category._id]);
 
     return (

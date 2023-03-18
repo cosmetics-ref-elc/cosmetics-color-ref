@@ -2,66 +2,62 @@
 @use "./mixins" as *;
 
 .productPage {
+  display: flex;
+  margin: 5% 10%;
+  gap: 6%;
+
+  @include mobile {
+    @include flexDefault;
+  }
+
+  .imagePart {
     display: flex;
-    margin: 5% 10%;
-    gap: 6%;
+    flex-direction: column;
+    width: 35%;
+    gap: 10px;
 
-    @include mobile{
-        @include flexDefault;
+    @include mobile {
+      width: 100%;
     }
 
-
-    .imagePart {
-        display: flex;
-        flex-direction: column;
-        width: 35%;
-        gap: 10px;
-
-        @include mobile{
-            width: 100%;
-        }
-
-        .displayImage {
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .imageCarousel {
-            div {
-                display: flex;
-                justify-content: space-between;
-
-                img {
-                    width: 45px !important;
-                    height: 45px !important;
-                }
-            }
-
-        }
+    .displayImage {
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
-
-    .textPart {
+    .imageCarousel {
+      div {
         display: flex;
-        flex-direction: column;
-        width: 65%;
+        justify-content: space-between;
 
-        @include mobile{
-            width: 100%;
-            margin-top:30px;
+        img {
+          width: 45px !important;
+          height: 45px !important;
         }
+      }
+    }
+  }
 
+  .textPart {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
 
-        .mainInfo {
-            @include mobile{
-                display: none;
-            }
+    @include mobile {
+      width: 100%;
+      margin-top: 30px;
+    }
 
-            p {
-                margin: 0;
-            }
+    .mainInfo {
+      @include mobile {
+        display: none;
+      }
+
+      p {
+        margin: 0;
+      }
 
             h3 {
                 font-size: 30px;
@@ -96,100 +92,92 @@
                 margin-top: 40px;
             }
 
-            .tab {
-                border: 1px solid #222222;
-                box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
-                border-radius: 8px;
-                text-align: center;
-                padding: 7px;
-            }
+      .tab {
+        border: 1px solid #222222;
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        text-align: center;
+        padding: 7px;
+      }
 
-            .active {
-                background-color: rgb(232, 231, 231);
-            }
+      .active {
+        background-color: rgb(232, 231, 231);
+      }
 
-            h4 {
-                font-size: 16px;
-                line-height: 24px;
-                font-weight: 400;
-                margin: 0;
+      h4 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin: 0;
 
-                @include mobile{
-                    font-size: 14px;
-                }
-            }
-
-
+        @include mobile {
+          font-size: 14px;
         }
-
-
-        .tabContent {
-            border: 1px solid #222222;
-            border-radius: 8px;
-            padding: 10px 13px;
-            line-height: 24px;
-            background: #FFFFFF;
-            margin-bottom: 8%;
-
-            @include mobile{
-                p{
-                    font-size: 12px;
-                    line-height: 16px;
-                }
-                
-            }
-        }
-
-        .otherInfo {
-            .accordionContent {
-                border-bottom: 1px solid #ABABAB;
-
-                p {
-                    font-size: 16px;
-                    line-height: 24px;
-
-                    @include mobile{
-                        font-size: 12px;
-                        line-height: 16px;
-                    }
-                }
-            }
-
-            h3 {
-                display: flex;
-                justify-content: space-between;
-
-                @include mobile{
-                    font-size: 16px;
-                }
-            }
-
-            .accordionButton {
-                border: none;
-                background: none;
-                cursor: pointer;
-                padding: 0;
-                margin: 0;
-                font-size: 1em;
-                color: #333;
-            }
-
-
-        }
-
-
+      }
     }
 
-    .mobileMainInfo{
-        display:none;
-        @include mobile{
-            display: block;
-            p{
-                font-size: 14px;;
-            }
-            h3{
-                font-size: 22px;
-            }
+    .tabContent {
+      border: 1px solid #222222;
+      border-radius: 8px;
+      padding: 10px 13px;
+      line-height: 24px;
+      background: #ffffff;
+      margin-bottom: 8%;
+
+      @include mobile {
+        p {
+          font-size: 12px;
+          line-height: 16px;
         }
+      }
     }
+
+    .otherInfo {
+      .accordionContent {
+        border-bottom: 1px solid #ababab;
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+
+          @include mobile {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      h3 {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+
+      .accordionButton {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        font-size: 1em;
+        color: #333;
+      }
+    }
+  }
+
+  .mobileMainInfo {
+    display: none;
+    @include mobile {
+      display: block;
+      p {
+        font-size: 14px;
+      }
+      h3 {
+        font-size: 22px;
+      }
+    }
+  }
 }

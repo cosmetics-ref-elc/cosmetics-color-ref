@@ -35,6 +35,18 @@
     gap: 15px;
     .catCards {
       @include cardStyle;
+      transition: 0.3s;
+      &:hover,
+      &:focus {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+      a {
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
       h4 {
         @include mobile {
           font-size: 25px;
