@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-
-import CategoryCard from './CategoryCard';
 import * as categoriesAPI from '../utilities/categories-api';
+import CategoryCard from './CategoryCard';
 
 const LandingPage = () => {
   const [categories, setCategories] = useState([]);

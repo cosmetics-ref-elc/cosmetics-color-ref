@@ -1,17 +1,16 @@
-# chrōma: Cosmetic Color Reference 
+# chrōma: Cosmetic Color Reference
 
 ## Introduction
+
 chrōma: Cosmetic Color Reference is an app designed to help people with color vision deficiency (CVD) better identify and understand the colors in makeup products. Currently, we have 2 make-up categories (Lips and Eyes), each with two lines of product from Estée Lauder. Each product has multiple shades that users can look through. Each shade information includes:
+
 - Reference images that help to understand the color
 - Detailed textual color description
 - Alt names for the color
 - Color ‘story’ which allow users to envision a scene in nature
 - Color support information (Hue, Hex code, RGB, HSL)
 
-This project is a group submission for the ELC Accessible Beauty Hackathon <a href=”https://elchackathon.devpost.com/”> created by Caiyi Chen, Chris Kim, Heidi Ye, Ingrid Yau, and Neha Bhole.
-
-<!-- Neha Bhole - Portfolio -  http://nehabhole.com/ ; Github - https://github.com/bholeneha ; LinkedIn - https://www.linkedin.com/in/nehabhole/ -->
-
+This project is a group submission for the [ELC Accessible Beauty Hackathon](https://elchackathon.devpost.com/) created by [Caiyi Chen](https://www.linkedin.com/in/caiyi-chen-b21898244/), [Chris Kim](https://www.linkedin.com/in/chris-ty-kim/), [Heidi Ye](https://www.linkedin.com/in/heidiye66/), [Ingrid Yau](https://www.linkedin.com/in/ingridyau/), and [Neha Bhole](https://www.linkedin.com/in/nehabhole/).
 
 ## Accessibility
 
@@ -20,20 +19,21 @@ The cosmetics industry has made progress in accessible design, but individuals w
 Recognizing the need for increased accessibility to color for users with CVD, we developed chrōma, an online database providing a comprehensive cosmetic color reference specifically for this community. Through chrōma, users can look up products to learn more about the color profile, texture, coverage, sensory or associations with nature of the color, and makeup suggestions. We also designed a grayscale UI option to provide a more comfortable experience for individuals with Achromatopisa (Total Color Blindness). This setting ensures that users exploring our database in greyscale have the same experience as those exploring in color, fulfilling our goal of inclusivity and accessibility. Our goal is to empower individuals with CVD to confidently navigate and explore the world of beauty and makeup by eliminating any barriers they may face.
 
 ## Features
-Fully functional, responsive, and accessible full-stack application built using the MERN stack:	
-- Database: MongoDB
-- Front-end: React.js
-- Back-end: Express.js/Node.js
-- Deployed on: 
 
-UI Design
+- Fully functional, responsive, and accessible full-stack application built using the MERN stack:
+  - Database: MongoDB
+  - Front-end: React.js
+  - Back-end: Express.js/Node.js
+- Deployed on: (needs update)
+- Functional, accessible and interactive UI design
 - Grayscale toggle that allows users to switch between full color and grayscale
 - Comprehensive color descriptors including, color profile, texture, coverage, sensory or associations with nature of the color, and makeup suggestions, to provide a better understanding of the color for individuals with CVD.
 
 ## Build Processes
 
 ### Design
-Design: Figma 
+
+Design: Figma
 The design prioritizes accessibility and centers users who experience color differently. It is intentionally straightforward, functional, and provides ample contrast and interaction cues for seamless navigation.
 
 ![Landing Page Layout](/src/assets/readme/design1.png)
@@ -63,7 +63,7 @@ Grayscale toggle option to provide a more comfortable experience for individuals
 
 ### Development
 
-#### Architechture
+#### Architecture
 
 The backend system is built using the Model-View-Controller (MVC) architecture pattern. The Model is created using Mongoose to connect to MongoDB Atlas, the Controller uses Express.js, and the View is built using React. By using this pattern, the code is organized in a way that makes it easier to maintain and scale the application.
 
@@ -73,18 +73,20 @@ The project uses MongoDB Atlas as the database for storing data. There are three
 Categories to Products have a one-to-many relationship, where each category can have many products associated with it.
 Category Schema is referenced in the Product Schema so that products can be queried independently.
 Products to Shades also have a one-to-many relationship, where each product can have many shades associated with it.
-Shade Schema is embedded in the Product Schema to simplify queries and improve performance. 
+Shade Schema is embedded in the Product Schema to simplify queries and improve performance.
 
 ##### ERD
+
 ![ERD](/src/assets/readme/ERD.png)
 
 #### API Endpoints
+
 The backend provides only one API endpoint at the moment, which is implemented using the Express.js router in the ./routes/api/categories.js file. This endpoint allows you to query data about categories in the database using a GET request.
 
 In future implementations, we plan to add more endpoints to provide additional functionality, such as the ability to create, update, and delete categories and products, as well as endpoints for managing user-related tasks.
 
-
 ## Future Implementations
+
 - Add more categories and products into the database
 - Add more brands beyond Estée Lauder into the database
 - Add CRUD functionlity to add more products to the database with ease
@@ -92,6 +94,6 @@ In future implementations, we plan to add more endpoints to provide additional f
   - By similar products or colors
   - Complementary products or colors
 - Display settings that can be personalized (i.e contrast or text size adjustments)
-- User Authentication (i.e. build favorites list, own profiles, different access points for different types of users) 
-- Community aspect (i.e. discussions, comments, reviews, likes)
 - Multiple toggle settings to target all types of CVD (i.e. red-green, blue-yellow, etc.)
+- User Authentication (i.e. build favorites list, own profiles, different access points for different types of users)
+- Community aspect (i.e. discussions, comments, reviews, likes)
