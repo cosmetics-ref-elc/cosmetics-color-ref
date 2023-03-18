@@ -63,20 +63,22 @@ Grayscale toggle option to provide a more comfortable experience for individuals
 
 ### Development
 
-Architechture
+#### Architechture
+
 The backend system is built using the Model-View-Controller (MVC) architecture pattern. The Model is created using Mongoose to connect to MongoDB Atlas, the Controller uses Express.js, and the View is built using React. By using this pattern, the code is organized in a way that makes it easier to maintain and scale the application.
 
-Database Setup
+#### Database Setup
+
 The project uses MongoDB Atlas as the database for storing data. There are three models used in the database - Category, Product, and Shade.
 Categories to Products have a one-to-many relationship, where each category can have many products associated with it.
 Category Schema is referenced in the Product Schema so that products can be queried independently.
 Products to Shades also have a one-to-many relationship, where each product can have many shades associated with it.
 Shade Schema is embedded in the Product Schema to simplify queries and improve performance. 
 
-ERD
+##### ERD
 ![ERD](/src/assets/readme/ERD.png)
 
-API Endpoints
+#### API Endpoints
 The backend provides only one API endpoint at the moment, which is implemented using the Express.js router in the ./routes/api/categories.js file. This endpoint allows you to query data about categories in the database using a GET request.
 
 In future implementations, we plan to add more endpoints to provide additional functionality, such as the ability to create, update, and delete categories and products, as well as endpoints for managing user-related tasks.
