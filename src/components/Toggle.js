@@ -12,13 +12,11 @@ const Toggle = () => {
   };
 
   return (
-    // Is this confusing? If so, I'll put it back to the way it was before
     <div className="switch">
       {isActive
         ? <p>Color</p>
         : <p>Grayscale</p>
     }
-      {/* https://github.com/markusenglund/react-switch#readme */}
       <label>
         <span className="sr-only">Switch to toggle between Grayscale and Color</span>
         <Switch

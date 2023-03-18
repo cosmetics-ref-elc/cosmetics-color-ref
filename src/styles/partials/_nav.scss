@@ -9,12 +9,10 @@
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 65px;
   position: relative;
+
   @include tablet {
     padding: 10px 20px;
   }
-
-  
-
   .logo {
     position: absolute;
     top: 50%;
@@ -23,17 +21,26 @@
   }
   .navLogo {
     color: $logoColor;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
     h1 {
-
-      @include mobile{
+      @include mobile {
         font-size: 30px;
       }
       margin: 0 auto;
       font-size: 40px;
       line-height: (48.41 / 40);
+      transition: 0.5s;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        transform: scale(1.05);
+      }
     }
   }
-  // Currently not being fully used as a list
+
   ul {
     display: flex;
     justify-content: space-between;
@@ -52,26 +59,21 @@
     justify-content: center;
     gap: 10px;
 
-    @include mobile{
-      flex-direction:column-reverse;
+    @include mobile {
+      flex-direction: column-reverse;
     }
 
-    label{
-      @include mobile{
-        margin-top: 10px; 
+    label {
+      @include mobile {
+        margin-top: 10px;
       }
-  
     }
 
-    
     p {
       margin: 0 auto;
-      @include mobile{
+      @include mobile {
         font-size: 13px;
       }
-      // @include mobileLarge {
-      //   display: none;
-      // }
     }
   }
 }
