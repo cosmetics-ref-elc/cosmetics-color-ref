@@ -21,8 +21,9 @@ const LandingPage = () => {
       <header>
         <h2>Cosmetic Color Reference</h2>
         <p className="shortDesc">
-          Short description explaining what this app does and who it serves.
-          {/* is this going to have an expandable 'learn more' thing? */}
+          <b>chrōma</b> is a comprehensive color reference designed for the
+          Color Vision Deficiency community by bridging any barriers they may
+          face when exploring the world of cosmetics.
         </p>
       </header>
       <div className="categories">

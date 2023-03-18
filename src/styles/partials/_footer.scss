@@ -3,20 +3,17 @@
 
 footer {
   width: 100%;
-  
+
   .footerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #e1e1e1;
     margin: 0 70px;
-
-
-    @include mobile{
+    @include mobile {
       flex-direction: column;
-      
     }
-   
+
     h3 {
       font-size: 14px;
     }

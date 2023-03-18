@@ -25,7 +25,7 @@ a {
 
 footer {
   position: absolute;
-  bottom:-1%;
+  bottom: -1%;
 }
 
 h2 {
@@ -33,13 +33,11 @@ h2 {
   font-weight: 400;
   line-height: (68 / 64);
   letter-spacing: 0.5px;
-  margin: 50px auto 35px;
+  margin: 35px auto 30px;
 
-  @include mobile{
+  @include mobile {
     font-size: 35px;
     text-align: center;
-    margin:5% 10%;
-
+    margin: 5% 10%;
   }
- 
 }
