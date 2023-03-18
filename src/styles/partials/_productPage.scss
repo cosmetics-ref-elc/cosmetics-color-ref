@@ -73,7 +73,15 @@
 
         }
 
-       
+        .dropdownMenu { 
+            .css-13cymwt-control{
+               width:40%;
+               @include mobile{
+                  width:100%;
+               }
+           }
+         }
+
           
     
         .colorTabs {
