@@ -5,6 +5,7 @@
   display: flex;
   margin: 5% 10%;
   gap: 6%;
+  min-height: 65vh;
 
   @include mobile {
     @include flexDefault;

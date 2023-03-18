@@ -84,6 +84,7 @@ const ProductPage = () => {
         {activeTab === "colorDescription" && (
           <div className="tabContent">
             <p>{activeShade.description}</p>
+            <p>Alt Names: {activeShade.color_alt_names}</p>
           </div>
         )}
 
