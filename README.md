@@ -36,24 +36,30 @@ UI Design
 Design: Figma 
 The design prioritizes accessibility and centers users who experience color differently. It is intentionally straightforward, functional, and provides ample contrast and interaction cues for seamless navigation.
 
-![]()
+![Landing Page Layout](/src/assets/readme/design1.png)
 
 Our core functionality is to make color information easily accessible and understandable. We achieve this by presenting swatches of the color range of a product against pure black (#000000) and pure white (#FFFFFF), serving as a reference for the color's shade and tint.
 
-![]()
-![]()
+![Reference Swatches 1](/src/assets/readme/design2.png)
+![Reference Swatches 2](/src/assets/readme/design3.png)
 
 Based on our user research, we understand that texture and associations with sensory or natural elements are crucial in helping individuals with CVD comprehend color. With this in mind, we have created a comprehensive breakdown of color information, including color description (with alternative names), color story, and color support details. Our images showcase the product, texture, complementary imagery for color story, color alone, and color against black and white to enhance the user's understanding of the color profile. To make the selection process more accessible, we have also included a brief description of texture and color in the dropdown selector.
 
-![]()
+![Color Information](/src/assets/readme/design4.png)
 
 The design system was also intentionally kept uncomplicated, by exploring different ways to enhance visual hierarchy and interest in lieu of a wider color system. Our goal was to make the colors from the products stand out without sacrificing the overall visual appeal of the database. We utilized well-established font family, weight, and sizes, shadow elevation and micro interactions to assist with visual hierarchy and interaction cues.
-![]()
-![]()
+
+![Typography](/src/assets/readme/design5.png)
+
+![Colors](/src/assets/readme/design6.png)
+
 Responsive mobile design designed with touchscreen interactions
-![]()
+
+![Mobile Design](/src/assets/readme/design7.png)
+
 Grayscale toggle option to provide a more comfortable experience for individuals with Achromatopsia (Total Color Blindness).
-![]()
+
+![Gray Scale Design](/src/assets/readme/design8.png)
 
 ### Development
 
@@ -68,7 +74,7 @@ Products to Shades also have a one-to-many relationship, where each product can 
 Shade Schema is embedded in the Product Schema to simplify queries and improve performance. 
 
 ERD
-![]()
+![ERD](/src/assets/readme/ERD.png)
 
 API Endpoints
 The backend provides only one API endpoint at the moment, which is implemented using the Express.js router in the ./routes/api/categories.js file. This endpoint allows you to query data about categories in the database using a GET request.
