@@ -18,7 +18,6 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        {/* Should we have this? If so, another design? */}
         <Link className="theCreators" to="/about-the-creators">
           <p>The Creators</p>
         </Link>

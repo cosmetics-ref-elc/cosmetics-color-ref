@@ -2,10 +2,11 @@
 @use "./mixins" as *;
 
 .categoryPage {
-  @include mobile{
-    h2{
+  min-height: 85vh;
+  @include mobile {
+    h2 {
       font-size: 35px;
-      font-weight: 600
+      font-weight: 600;
     }
   }
 
@@ -22,7 +23,7 @@
   gap: 15px;
 
   //media query
-  @include mobile{
+  @include mobile {
     flex-direction: column;
   }
 
@@ -49,7 +50,7 @@
         font-size: 25px;
         font-weight: 400;
 
-        @include mobile{
+        @include mobile {
           font-size: 20px;
         }
       }
