@@ -10,10 +10,8 @@ const LandingPage = () => {
     async function getCategories() {
       const categories = await categoriesAPI.getAll();
       setCategories(categories)
-      console.log(categories)
     }
     getCategories()
-    console.log('I only fire once!')
   }, []);
 
   return (

@@ -9,7 +9,6 @@ const ProductPage = () => {
   const { isActive } = useGray();
   const location = useLocation();
   const product = location.state;
-  console.log(product);
 
   const [activeShade, setActiveShade] = useState(product.shades[0]);
   const [activeImage, setActiveImage] = useState("");

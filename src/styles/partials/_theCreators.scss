@@ -1,9 +1,10 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.theCreators {
+.theCreatorsPage {
   background-color: #d0d5dd;
-  height: auto;
+  // height: auto;
+  min-height: 85vh;
   .wrapper {
     max-width: 1728px;
     width: 90%;
@@ -36,13 +37,13 @@
     padding-left: 0;
     @media (max-width: 1350px) {
       flex-wrap: wrap;
+      padding-bottom: 50px;
     }
     .creatorCard {
       background-color: $secondaryColor;
       width: 232px;
       height: 432px;
       padding: 20px 16px;
-      // margin-bottom: 180px;
       border-radius: 4px;
       position: relative;
       .imgContainer {

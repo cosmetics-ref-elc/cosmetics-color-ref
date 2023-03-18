@@ -1,7 +1,5 @@
 export default function ShadeList({ shades, activeShade, setActiveShade }) {
 
-    console.log(shades[0])
-
     const shadesDropdown = shades.map((shade) => (
         <option key={shade._id} value={shade._id}>
             <div>

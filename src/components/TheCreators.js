@@ -12,7 +12,7 @@ import portfolioIcon from "../assets/TheCreators/Portfolio.png";
 const TheCreators = () => {
   const { isActive } = useGray();
   return (
-    <section className="theCreators">
+    <section className="theCreatorsPage">
       <div className="wrapper">
         <Link to="/" className="link">
           {" "}
