@@ -277,11 +277,6 @@ a {
   position: relative;
 }
 
-footer {
-  position: absolute;
-  bottom: -1%;
-}
-
 h2 {
   font-size: 64px;
   font-weight: 400;
@@ -502,11 +497,24 @@ h2 {
   margin: 5% 10%;
   gap: 6%;
 }
+@media (max-width: 450px) {
+  .productPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .productPage .imagePart {
   display: flex;
   flex-direction: column;
   width: 35%;
   gap: 10px;
+}
+@media (max-width: 450px) {
+  .productPage .imagePart {
+    width: 100%;
+  }
 }
 .productPage .imagePart .displayImage img {
   width: 100%;
@@ -524,6 +532,17 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 65%;
+}
+@media (max-width: 450px) {
+  .productPage .textPart {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .productPage .textPart .mainInfo {
+    display: none;
+  }
 }
 .productPage .textPart .mainInfo p {
   margin: 0;
@@ -557,12 +576,24 @@ h2 {
   font-weight: 400;
   margin: 0;
 }
+@media (max-width: 450px) {
+  .productPage .textPart .colorTabs h4 {
+    font-size: 14px;
+  }
+}
 .productPage .textPart .tabContent {
   border: 1px solid #222222;
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 10px 13px;
   line-height: 24px;
   background: #FFFFFF;
+  margin-bottom: 8%;
+}
+@media (max-width: 450px) {
+  .productPage .textPart .tabContent p {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 .productPage .textPart .otherInfo .accordionContent {
   border-bottom: 1px solid #ABABAB;
@@ -571,9 +602,20 @@ h2 {
   font-size: 16px;
   line-height: 24px;
 }
+@media (max-width: 450px) {
+  .productPage .textPart .otherInfo .accordionContent p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
 .productPage .textPart .otherInfo h3 {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 450px) {
+  .productPage .textPart .otherInfo h3 {
+    font-size: 16px;
+  }
 }
 .productPage .textPart .otherInfo .accordionButton {
   border: none;
@@ -583,6 +625,20 @@ h2 {
   margin: 0;
   font-size: 1em;
   color: #333;
+}
+.productPage .mobileMainInfo {
+  display: none;
+}
+@media (max-width: 450px) {
+  .productPage .mobileMainInfo {
+    display: block;
+  }
+  .productPage .mobileMainInfo p {
+    font-size: 14px;
+  }
+  .productPage .mobileMainInfo h3 {
+    font-size: 22px;
+  }
 }
 
 .theCreators {
@@ -670,6 +726,7 @@ footer .footerContainer {
   align-items: center;
   border-top: 1px solid #e1e1e1;
   margin: 0 70px;
+  padding-top: 0.5%;
 }
 @media (max-width: 450px) {
   footer .footerContainer {

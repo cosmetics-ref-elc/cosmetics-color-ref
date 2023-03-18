@@ -33,6 +33,12 @@ const ProductPage = () => {
 
   return (
     <section className="productPage">
+      <div className="mobileMainInfo">
+        <p>{product.brand}</p>
+        <h3>{product.name}</h3>
+        {/* <h2>{activeShade?.name}</h2> */}
+      </div>
+
       <div className="imagePart">
         <div className="displayImage">
           <img
