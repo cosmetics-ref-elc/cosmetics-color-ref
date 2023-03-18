@@ -559,6 +559,9 @@ h2 {
   width: 45px !important;
   height: 45px !important;
 }
+.productPage .imagePart .imageCarousel div img:hover, .productPage .imagePart .imageCarousel div img:focus {
+  cursor: pointer;
+}
 .productPage .textPart {
   display: flex;
   flex-direction: column;
@@ -592,6 +595,9 @@ h2 {
     width: 100%;
   }
 }
+.productPage .textPart .dropdownMenu .css-1xc3v61-indicatorContainer:hover, .productPage .textPart .dropdownMenu .css-1xc3v61-indicatorContainerfocus {
+  cursor: pointer;
+}
 .productPage .textPart .colorTabs {
   display: flex;
   align-items: flex-start;
@@ -611,6 +617,9 @@ h2 {
   border-radius: 8px;
   text-align: center;
   padding: 7px;
+}
+.productPage .textPart .colorTabs .tab:hover, .productPage .textPart .colorTabs .tab:focus {
+  cursor: pointer;
 }
 .productPage .textPart .colorTabs .active {
   background-color: rgb(232, 231, 231);

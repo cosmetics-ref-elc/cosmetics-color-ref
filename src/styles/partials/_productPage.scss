@@ -35,6 +35,10 @@
         img {
           width: 45px !important;
           height: 45px !important;
+          &:hover,
+          &:focus {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -69,6 +73,12 @@
       @include mobile {
         width: 100%;
       }
+      .css-1xc3v61-indicatorContainer {
+        &:hover,
+        &focus {
+          cursor: pointer;
+        }
+      }
     }
     .colorTabs {
       display: flex;
@@ -86,6 +96,10 @@
         border-radius: 8px;
         text-align: center;
         padding: 7px;
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
       }
       .active {
         background-color: rgb(232, 231, 231);
