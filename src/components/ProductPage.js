@@ -35,7 +35,6 @@ const ProductPage = () => {
       <div className="mobileMainInfo">
         <p>{product.brand}</p>
         <h3>{product.name}</h3>
-        {/* <h2>{activeShade?.name}</h2> */}
       </div>
 
       <div className="imagePart">
@@ -49,7 +48,6 @@ const ProductPage = () => {
         </div>
 
         <div className="imageCarousel">
-          {/* sorry, didn't have time to populate this section */}
           <ShadeImage
             images={imagesRef.current}
             activeImage={activeImage}
@@ -62,7 +60,6 @@ const ProductPage = () => {
         <div className="mainInfo">
           <p>{product.brand}</p>
           <h3>{product.name}</h3>
-          {/* <h2>{activeShade?.name}</h2> */}
         </div>
 
         <div className="dropdownMenu">
@@ -73,42 +70,17 @@ const ProductPage = () => {
           />
         </div>
 
-      <div className="colorTabs">
-        <div className={`tab ${activeTab === "colorDescription" ? "active" : ""}`} onClick={() => setActiveTab("colorDescription")}>
-          <h4>Color Description</h4>
-        </div>
-        <div className={`tab ${activeTab === "colorStory" ? "active" : ""}`} onClick={() => setActiveTab("colorStory")}>
-          <h4>Color Story</h4>
-        </div>
-        <div className={`tab ${activeTab === "colorSupportInfo" ? "active" : ""}`} onClick={() => setActiveTab("colorSupportInfo")}>
-          <h4>Color Support Information</h4>
-        </div>
-      </div>
-        {/* <div className="colorTabs">
-          <div
-            className={`tab ${
-              activeTab === "colorDescription" ? "active" : ""
-            }`}
-            onClick={() => setActiveTab("colorDescription")}
-          >
+        <div className="colorTabs">
+          <div className={`tab ${activeTab === "colorDescription" ? "active" : ""}`} onClick={() => setActiveTab("colorDescription")}>
             <h4>Color Description</h4>
           </div>
-          <div
-            className={`tab ${activeTab === "colorStory" ? "active" : ""}`}
-            onClick={() => setActiveTab("colorStory")}
-          >
-            <h4>Finding Earthy Tones</h4>
+          <div className={`tab ${activeTab === "colorStory" ? "active" : ""}`} onClick={() => setActiveTab("colorStory")}>
+            <h4>Color Story</h4>
           </div>
-          <div
-            className={`tab ${
-              activeTab === "colorSupportInfo" ? "active" : ""
-            }`}
-            onClick={() => setActiveTab("colorSupportInfo")}
-          >
+          <div className={`tab ${activeTab === "colorSupportInfo" ? "active" : ""}`} onClick={() => setActiveTab("colorSupportInfo")}>
             <h4>Color Support Information</h4>
           </div>
-        </div> */}
-
+        </div>
         {activeTab === "colorDescription" && (
           <div className="tabContent">
             <p>{activeShade.description}</p>
@@ -129,40 +101,7 @@ const ProductPage = () => {
           </div>
         )}
 
-        {/* <div className="colorTabs">
-        <div className="tab">
-          <h4>Color Description</h4>
-          <p>{activeShade.description}</p>
-        </div>
-        <div className="tab">
-          <h4>Finding Earthy Tones</h4>
-          <p>{activeShade.color_story}</p>
-        </div>
-        <div className="tab">
-          <h4>Color Support Information</h4>
-          {activeShade.color_support_info.map(info =>
-            <p>{info}</p>
-          )}
-        </div>
-      </div> */}
-
         <div className="otherInfo">
-          {/* <div className="infoSection">
-          <h3>Product Description</h3>
-          {product.description.map(info =>
-            <p>{info}</p>
-          )}
-        </div>
-        <div className="infoSection">
-          <h3>How to Use</h3>
-          {product.usage.map(info =>
-            <p>{info}</p>
-          )}
-        </div>
-        <div className="infoSection">
-          <h3>Ingredients</h3>
-          <p>{product.ingredients}</p>
-        </div> */}
           <Accordion
             title="Product Description"
             content={product.description.map((info) => (

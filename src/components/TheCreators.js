@@ -11,6 +11,7 @@ import portfolioIcon from "../assets/TheCreators/Portfolio.png";
 
 const TheCreators = () => {
   const { isActive } = useGray();
+  
   return (
     <section className="theCreatorsPage">
       <div className="wrapper">

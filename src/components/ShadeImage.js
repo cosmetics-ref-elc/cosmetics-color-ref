@@ -1,6 +1,6 @@
 import { useGray } from "../context/ToggleGrayscale";
 
-export default function ShadeImage({ images, activeImage, setActiveImage }) {
+const ShadeImage = ({ images, activeImage, setActiveImage }) => {
 
     const { isActive } = useGray();
 
@@ -13,7 +13,7 @@ export default function ShadeImage({ images, activeImage, setActiveImage }) {
             key={index}
             src={url}
             alt={url}
-            className=""
+            className="currShadeImgs"
             style={{
                 width: "30px",
                 height: "30px",
@@ -24,5 +24,11 @@ export default function ShadeImage({ images, activeImage, setActiveImage }) {
         />
     ));
 
-    return <div className="">{currentShadeImgs}</div>;
+    return (
+        <div className="shadeImgs">
+            {currentShadeImgs}
+        </div>
+    )
 }
+
+export default ShadeImage;

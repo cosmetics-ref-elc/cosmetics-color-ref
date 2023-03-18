@@ -18,11 +18,11 @@ const CategoryCard = ({ categories }) => {
     </li>
   ));
 
-    return (
-        <div className="categoryCard">
-            {category_cards}
-        </div>
-    )
+  return (
+      <div className="categoryCard">
+          {category_cards}
+      </div>
+  )
 }
 
 export default CategoryCard;

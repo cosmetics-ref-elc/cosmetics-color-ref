@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Toggle from "./Toggle";
+
 const NavBar = () => {
   return (
     <nav className="mainNav">

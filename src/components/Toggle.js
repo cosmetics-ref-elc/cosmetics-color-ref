@@ -16,7 +16,7 @@ const Toggle = () => {
       {isActive
         ? <p>Color</p>
         : <p>Grayscale</p>
-    }
+      }
       <label>
         <span className="sr-only">Switch to toggle between Grayscale and Color</span>
         <Switch
