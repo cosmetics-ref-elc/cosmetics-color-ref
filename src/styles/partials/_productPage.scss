@@ -2,179 +2,164 @@
 @use "./mixins" as *;
 
 .productPage {
+  display: flex;
+  margin: 5% 10%;
+  gap: 6%;
+
+  @include mobile {
+    @include flexDefault;
+  }
+
+  .imagePart {
     display: flex;
-    margin: 5% 10%;
-    gap: 6%;
+    flex-direction: column;
+    width: 35%;
+    gap: 10px;
 
-    @include mobile{
-        @include flexDefault;
+    @include mobile {
+      width: 100%;
     }
 
+    .displayImage {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
 
-    .imagePart {
+    .imageCarousel {
+      div {
         display: flex;
-        flex-direction: column;
-        width: 35%;
-        gap: 10px;
+        justify-content: space-between;
 
-        @include mobile{
-            width: 100%;
+        img {
+          width: 45px !important;
+          height: 45px !important;
         }
+      }
+    }
+  }
 
-        .displayImage {
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
+  .textPart {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
 
-        .imageCarousel {
-            div {
-                display: flex;
-                justify-content: space-between;
-
-                img {
-                    width: 45px !important;
-                    height: 45px !important;
-                }
-            }
-
-        }
+    @include mobile {
+      width: 100%;
+      margin-top: 30px;
     }
 
+    .mainInfo {
+      @include mobile {
+        display: none;
+      }
 
-    .textPart {
+      p {
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 38px;
+        margin: 15px auto;
+      }
+    }
+
+    .colorTabs {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      .tab {
+        border: 1px solid #222222;
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        text-align: center;
+        padding: 7px;
+      }
+
+      .active {
+        background-color: rgb(232, 231, 231);
+      }
+
+      h4 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin: 0;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .tabContent {
+      border: 1px solid #222222;
+      border-radius: 8px;
+      padding: 10px 13px;
+      line-height: 24px;
+      background: #ffffff;
+      margin-bottom: 8%;
+
+      @include mobile {
+        p {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .otherInfo {
+      .accordionContent {
+        border-bottom: 1px solid #ababab;
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+
+          @include mobile {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      h3 {
         display: flex;
-        flex-direction: column;
-        width: 65%;
+        justify-content: space-between;
 
-        @include mobile{
-            width: 100%;
-            margin-top:30px;
+        @include mobile {
+          font-size: 16px;
         }
+      }
 
-
-        .mainInfo {
-            @include mobile{
-                display: none;
-            }
-
-            p {
-                margin: 0;
-            }
-
-            h3 {
-                font-size: 30px;
-                font-weight: 500;
-                line-height: 38px;
-                margin: 15px auto;
-
-            }
-
-        }
-
-
-        .colorTabs {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            margin-top: 20px;
-            margin-bottom: 40px;
-
-            .tab {
-                border: 1px solid #222222;
-                box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
-                border-radius: 8px;
-                text-align: center;
-                padding: 7px;
-            }
-
-            .active {
-                background-color: rgb(232, 231, 231);
-            }
-
-            h4 {
-                font-size: 16px;
-                line-height: 24px;
-                font-weight: 400;
-                margin: 0;
-
-                @include mobile{
-                    font-size: 14px;
-                }
-            }
-
-
-        }
-
-
-        .tabContent {
-            border: 1px solid #222222;
-            border-radius: 8px;
-            padding: 10px 13px;
-            line-height: 24px;
-            background: #FFFFFF;
-            margin-bottom: 8%;
-
-            @include mobile{
-                p{
-                    font-size: 12px;
-                    line-height: 16px;
-                }
-                
-            }
-        }
-
-        .otherInfo {
-            .accordionContent {
-                border-bottom: 1px solid #ABABAB;
-
-                p {
-                    font-size: 16px;
-                    line-height: 24px;
-
-                    @include mobile{
-                        font-size: 12px;
-                        line-height: 16px;
-                    }
-                }
-            }
-
-            h3 {
-                display: flex;
-                justify-content: space-between;
-
-                @include mobile{
-                    font-size: 16px;
-                }
-            }
-
-            .accordionButton {
-                border: none;
-                background: none;
-                cursor: pointer;
-                padding: 0;
-                margin: 0;
-                font-size: 1em;
-                color: #333;
-            }
-
-
-        }
-
-
+      .accordionButton {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        font-size: 1em;
+        color: #333;
+      }
     }
+  }
 
-    .mobileMainInfo{
-        display:none;
-        @include mobile{
-            display: block;
-            p{
-                font-size: 14px;;
-            }
-            h3{
-                font-size: 22px;
-            }
-        }
+  .mobileMainInfo {
+    display: none;
+    @include mobile {
+      display: block;
+      p {
+        font-size: 14px;
+      }
+      h3 {
+        font-size: 22px;
+      }
     }
+  }
 }
