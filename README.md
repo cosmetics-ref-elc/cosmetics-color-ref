@@ -83,12 +83,13 @@ In future implementations, we plan to add more endpoints to provide additional f
 
 
 ## Future Implementations
-Add more categories and products into the database
-Add more brands beyond Estée Lauder into the database
-Add search and filter functionality:
-By similar products or colors
-Complementary products or colors
-Display settings that can be personalized (i.e Contrast or text size adjustments)
-User Authentication (i.e. build favorites list, own profiles, different access points for different types of users) 
-Community aspect (i.e. discussions, comments, reviews, likes)
-Multiple toggle settings to target all types of CVD (i.e. red-green, blue-yellow, etc.)
+- Add more categories and products into the database
+- Add more brands beyond Estée Lauder into the database
+- Add CRUD functionlity to add more products to the database with ease
+- Add search and filter functionality:
+  - By similar products or colors
+  - Complementary products or colors
+- Display settings that can be personalized (i.e contrast or text size adjustments)
+- User Authentication (i.e. build favorites list, own profiles, different access points for different types of users) 
+- Community aspect (i.e. discussions, comments, reviews, likes)
+- Multiple toggle settings to target all types of CVD (i.e. red-green, blue-yellow, etc.)
