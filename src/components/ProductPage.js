@@ -73,7 +73,18 @@ const ProductPage = () => {
           />
         </div>
 
-        <div className="colorTabs">
+      <div className="colorTabs">
+        <div className={`tab ${activeTab === "colorDescription" ? "active" : ""}`} onClick={() => setActiveTab("colorDescription")}>
+          <h4>Color Description</h4>
+        </div>
+        <div className={`tab ${activeTab === "colorStory" ? "active" : ""}`} onClick={() => setActiveTab("colorStory")}>
+          <h4>Color Story</h4>
+        </div>
+        <div className={`tab ${activeTab === "colorSupportInfo" ? "active" : ""}`} onClick={() => setActiveTab("colorSupportInfo")}>
+          <h4>Color Support Information</h4>
+        </div>
+      </div>
+        {/* <div className="colorTabs">
           <div
             className={`tab ${
               activeTab === "colorDescription" ? "active" : ""
@@ -96,7 +107,7 @@ const ProductPage = () => {
           >
             <h4>Color Support Information</h4>
           </div>
-        </div>
+        </div> */}
 
         {activeTab === "colorDescription" && (
           <div className="tabContent">
