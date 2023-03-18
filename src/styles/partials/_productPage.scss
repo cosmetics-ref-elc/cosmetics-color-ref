@@ -73,13 +73,20 @@
 
         }
 
-
+       
+          
+    
         .colorTabs {
             display: flex;
             align-items: flex-start;
             gap: 8px;
             margin-top: 20px;
             margin-bottom: 40px;
+
+            @include mobile{
+                margin-bottom: 20px;
+                margin-top: 40px;
+            }
 
             .tab {
                 border: 1px solid #222222;

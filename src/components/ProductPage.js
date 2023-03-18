@@ -86,7 +86,7 @@ const ProductPage = () => {
           <h4>Color Description</h4>
         </div>
         <div className={`tab ${activeTab === "colorStory" ? "active" : ""}`} onClick={() => setActiveTab("colorStory")}>
-          <h4>Finding Earthy Tones</h4>
+          <h4>Color Story</h4>
         </div>
         <div className={`tab ${activeTab === "colorSupportInfo" ? "active" : ""}`} onClick={() => setActiveTab("colorSupportInfo")}>
           <h4>Color Support Information</h4>
