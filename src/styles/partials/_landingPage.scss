@@ -2,16 +2,16 @@
 @use "./mixins" as *;
 
 .landingPage {
+  min-height: 85vh;
   header {
     @include flexDefault;
     .shortDesc {
       font-size: 18px;
       line-height: (24 / 18);
-      max-width: 600px;
-
-      @include mobile{
-        text-align: center;
-        margin:auto 5%;
+      max-width: 737px;
+      text-align: center;
+      @include mobile {
+        margin: auto 5%;
       }
     }
   }
@@ -20,8 +20,6 @@
     @include flexDefault;
     ul {
       padding-left: 0;
-
-     
     }
     h3 {
       font-size: 24px;
@@ -30,16 +28,15 @@
   }
 
   .categoryCard {
-    @include mobile{
+    @include mobile {
       flex-direction: column;
     }
     display: flex;
     gap: 15px;
     .catCards {
-     
       @include cardStyle;
       h4 {
-        @include mobile{
+        @include mobile {
           font-size: 25px;
         }
         font-size: 32px;
