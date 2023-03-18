@@ -9,10 +9,10 @@ const CategoryPage = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-      async function getProducts() {
-        const categories = await categoriesAPI.getById(category._id);
-        setProducts(categories);
-      }
+        async function getProducts() {
+            const categories = await categoriesAPI.getById(category._id);
+            setProducts(categories);
+        }
         getProducts();
     }, [category._id]);
 

@@ -272,6 +272,9 @@ a {
   text-decoration: none;
   color: #222222;
 }
+a:hover, a:focus {
+  text-decoration: underline;
+}
 
 #App {
   position: relative;
@@ -315,15 +318,23 @@ h2 {
 .mainNav .navLogo {
   color: #333333;
 }
+.mainNav .navLogo:hover, .mainNav .navLogo:focus {
+  text-decoration: none;
+}
 .mainNav .navLogo h1 {
   margin: 0 auto;
   font-size: 40px;
   line-height: 1.21025;
+  transition: 0.5s;
 }
 @media (max-width: 450px) {
   .mainNav .navLogo h1 {
     font-size: 30px;
   }
+}
+.mainNav .navLogo h1:hover, .mainNav .navLogo h1:focus {
+  text-decoration: none;
+  transform: scale(1.05);
 }
 .mainNav ul {
   display: flex;
@@ -361,6 +372,9 @@ h2 {
   }
 }
 
+.landingPage {
+  min-height: 85vh;
+}
 .landingPage header {
   display: flex;
   flex-direction: column;
@@ -408,6 +422,14 @@ h2 {
   height: 366px;
   text-align: center;
   background-color: #fff;
+  transition: 0.3s;
+}
+.landingPage .categoryCard .catCards:hover, .landingPage .categoryCard .catCards:focus {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.landingPage .categoryCard .catCards a:hover, .landingPage .categoryCard .catCards a:focus {
+  text-decoration: none;
 }
 .landingPage .categoryCard .catCards h4 {
   font-size: 32px;
@@ -425,6 +447,7 @@ h2 {
 }
 
 .categoryPage {
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -464,6 +487,14 @@ h2 {
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: 0.3s;
+}
+.productCard .prodCards:hover, .productCard .prodCards:focus {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.productCard .prodCards a:hover, .productCard .prodCards a:focus {
+  text-decoration: none;
 }
 .productCard .prodCards .imgContainer {
   flex-basis: 50%;
@@ -489,7 +520,7 @@ h2 {
 }
 .productCard .prodCards .swatchContainer {
   position: absolute;
-  bottom: -1px;
+  bottom: -5px;
 }
 
 .productPage {
@@ -553,12 +584,26 @@ h2 {
   line-height: 38px;
   margin: 15px auto;
 }
+.productPage .textPart .dropdownMenu {
+  width: 40%;
+}
+@media (max-width: 450px) {
+  .productPage .textPart .dropdownMenu {
+    width: 100%;
+  }
+}
 .productPage .textPart .colorTabs {
   display: flex;
   align-items: flex-start;
   gap: 8px;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+@media (max-width: 450px) {
+  .productPage .textPart .colorTabs {
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
 }
 .productPage .textPart .colorTabs .tab {
   border: 1px solid #222222;
@@ -586,7 +631,7 @@ h2 {
   border-radius: 8px;
   padding: 10px 13px;
   line-height: 24px;
-  background: #FFFFFF;
+  background: #ffffff;
   margin-bottom: 8%;
 }
 @media (max-width: 450px) {
@@ -596,7 +641,7 @@ h2 {
   }
 }
 .productPage .textPart .otherInfo .accordionContent {
-  border-bottom: 1px solid #ABABAB;
+  border-bottom: 1px solid #ababab;
 }
 .productPage .textPart .otherInfo .accordionContent p {
   font-size: 16px;
@@ -641,35 +686,40 @@ h2 {
   }
 }
 
-.theCreators {
+.theCreatorsPage {
   background-color: #d0d5dd;
-  height: auto;
+  min-height: 85vh;
 }
-.theCreators .wrapper {
+.theCreatorsPage .wrapper {
   max-width: 1728px;
   width: 90%;
   margin: 0 auto;
 }
-.theCreators .wrapper .link {
+.theCreatorsPage .wrapper .link {
   display: flex;
   align-items: center;
   font-size: 18px;
   padding-top: 50px;
+  transition: 0.3s;
 }
-.theCreators .wrapper .link span {
+.theCreatorsPage .wrapper .link:hover, .theCreatorsPage .wrapper .link:focus {
+  text-decoration: none;
+  transform: translateX(-5px);
+}
+.theCreatorsPage .wrapper .link span {
   font-size: 35px;
   margin-right: 15px;
 }
-.theCreators .wrapper .link p {
+.theCreatorsPage .wrapper .link p {
   padding-top: 4px;
 }
-.theCreators .wrapper h2 {
+.theCreatorsPage .wrapper h2 {
   font-size: 32px;
   margin-top: 0;
   padding: 20px 0;
   text-align: center;
 }
-.theCreators .creatorsGrid {
+.theCreatorsPage .creatorsGrid {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -677,11 +727,12 @@ h2 {
   padding-left: 0;
 }
 @media (max-width: 1350px) {
-  .theCreators .creatorsGrid {
+  .theCreatorsPage .creatorsGrid {
     flex-wrap: wrap;
+    padding-bottom: 50px;
   }
 }
-.theCreators .creatorsGrid .creatorCard {
+.theCreatorsPage .creatorsGrid .creatorCard {
   background-color: #fefefe;
   width: 232px;
   height: 432px;
@@ -689,21 +740,21 @@ h2 {
   border-radius: 4px;
   position: relative;
 }
-.theCreators .creatorsGrid .creatorCard .imgContainer img {
+.theCreatorsPage .creatorsGrid .creatorCard .imgContainer img {
   width: 200px;
   height: 200px;
 }
-.theCreators .creatorsGrid .creatorCard .textContainer {
+.theCreatorsPage .creatorsGrid .creatorCard .textContainer {
   text-align: center;
 }
-.theCreators .creatorsGrid .creatorCard .textContainer h3 {
+.theCreatorsPage .creatorsGrid .creatorCard .textContainer h3 {
   font-size: 16px;
 }
-.theCreators .creatorsGrid .creatorCard .textContainer h3 span {
+.theCreatorsPage .creatorsGrid .creatorCard .textContainer h3 span {
   font-size: 14px;
   font-weight: 400;
 }
-.theCreators .socialsList {
+.theCreatorsPage .socialsList {
   display: flex;
   gap: 10px;
   padding-left: 0;
@@ -713,8 +764,12 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.theCreators .socialsList .socials .icon {
+.theCreatorsPage .socialsList .socials .icon {
   width: 32px;
+  transition: 0.3s;
+}
+.theCreatorsPage .socialsList .socials .icon:hover, .theCreatorsPage .socialsList .socials .icon:focus {
+  transform: scale(1.15);
 }
 
 footer {

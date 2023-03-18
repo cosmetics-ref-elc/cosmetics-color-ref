@@ -54,44 +54,32 @@
       @include mobile {
         display: none;
       }
-
       p {
         margin: 0;
       }
-
-            h3 {
-                font-size: 30px;
-                font-weight: 500;
-                line-height: 38px;
-                margin: 15px auto;
-
-            }
-
-        }
-
-        .dropdownMenu { 
-            width:40%;
-        
-               @include mobile{
-                  width:100%;
-               }
-           
-         }
-
-          
-    
-        .colorTabs {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            margin-top: 20px;
-            margin-bottom: 40px;
-
-            @include mobile{
-                margin-bottom: 20px;
-                margin-top: 40px;
-            }
-
+      h3 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 38px;
+        margin: 15px auto;
+      }
+    }
+    .dropdownMenu {
+      width: 40%;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    .colorTabs {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      @include mobile {
+        margin-bottom: 20px;
+        margin-top: 40px;
+      }
       .tab {
         border: 1px solid #222222;
         box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
@@ -99,17 +87,14 @@
         text-align: center;
         padding: 7px;
       }
-
       .active {
         background-color: rgb(232, 231, 231);
       }
-
       h4 {
         font-size: 16px;
         line-height: 24px;
         font-weight: 400;
         margin: 0;
-
         @include mobile {
           font-size: 14px;
         }
@@ -135,7 +120,6 @@
     .otherInfo {
       .accordionContent {
         border-bottom: 1px solid #ababab;
-
         p {
           font-size: 16px;
           line-height: 24px;
@@ -146,7 +130,6 @@
           }
         }
       }
-
       h3 {
         display: flex;
         justify-content: space-between;
