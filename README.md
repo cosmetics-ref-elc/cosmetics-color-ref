@@ -2,7 +2,7 @@
 
 ## Introduction
 
-chrōma: Cosmetic Color Reference is an app designed to help people with color vision deficiency (CVD) better identify and understand the colors in makeup products. Currently, we have 2 make-up categories (Lips and Eyes), each with two lines of product from Estée Lauder. Each product has multiple shades that users can look through. Each shade information includes:
+[chrōma: Cosmetic Color Reference](https://chroma-cosmetics-color-ref.herokuapp.com/) is an app designed to help people with color vision deficiency (CVD) better identify and understand the colors in makeup products. Currently, we have 2 make-up categories (Lips and Eyes), each with two lines of product from Estée Lauder. Each product has multiple shades that users can look through. Each shade information includes:
 
 - Reference images that help to understand the color
 - Detailed textual color description
@@ -24,7 +24,7 @@ Recognizing the need for increased accessibility to color for users with CVD, we
   - Database: MongoDB
   - Front-end: React.js
   - Back-end: Express.js/Node.js
-- Deployed on: (needs update)
+- Deployed on Heroku
 - Functional, accessible and interactive UI design
 - Grayscale toggle that allows users to switch between full color and grayscale
 - Comprehensive color descriptors including, color profile, texture, coverage, sensory or associations with nature of the color, and makeup suggestions, to provide a better understanding of the color for individuals with CVD.
